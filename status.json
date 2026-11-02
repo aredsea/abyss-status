@@ -790,7 +790,7 @@
    "state": "done",
    "started": "2026-10-31T16:19+09:00",
    "touched": "2026-11-03T01:30+09:00",
-   "idle_sec": 1041,
+   "idle_sec": 1224,
    "steps": 103,
    "last": ""
   },
@@ -802,9 +802,9 @@
    "detail": "30명 여관 대화·던전 짧은 말·단계 변화 실제 재생, 30명 전 장면 360·430 폭 넘침 검사, 원본 이름 일치, 클라우드 허용 목록에 30명 표본",
    "state": "running",
    "started": "2026-10-31T16:19+09:00",
-   "touched": "2026-11-03T01:47+09:00",
-   "idle_sec": 28,
-   "steps": 76,
+   "touched": "2026-11-03T01:50+09:00",
+   "idle_sec": 9,
+   "steps": 85,
    "last": ""
   }
  ],
@@ -887,8 +887,8 @@
   "build": "torva-art-20261027-r4b",
   "ui_build": "r21-d-town-20261103b",
   "engine": "Godot 4.7.2",
-  "pck_sha256": "59c33e5b5d412bda6a70cbf72bf33e82f8edcd95adbde4e53d0f2b4fcadb99fb",
+  "pck_sha256": "febb8b822df8bcc208331b4a13a43dc57b7561d9757b04ff6b130c7ff7d04b7a",
   "wasm_sha256": "fc74679e3b97f76878947fcd4fbe1268cbfa6188182a2e33bbc3f5dc9bfa57d0"
  },
- "generated": "2026-11-03T01:47:53+09:00"
+ "generated": "2026-11-03T01:50:56+09:00"
 }
