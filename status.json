@@ -455,9 +455,9 @@
    "review_findings": 6,
    "state": "running",
    "started": "2026-10-31T16:19+09:00",
-   "touched": "2026-11-02T21:13+09:00",
-   "idle_sec": 10,
-   "steps": 22,
+   "touched": "2026-11-02T21:16+09:00",
+   "idle_sec": 11,
+   "steps": 32,
    "last": ""
   },
   {
@@ -468,9 +468,9 @@
    "detail": "원본 65-codex·66-status·74-affection·85/86-portrait: 미영입 포함 도감, 동료·페르소나 상세·즐겨찾기·장비 비교/일괄 판매, 호감 8단계, 기본/표정 초상 선택",
    "state": "running",
    "started": "2026-11-02T20:19+09:00",
-   "touched": "2026-11-02T21:13+09:00",
-   "idle_sec": 10,
-   "steps": 70,
+   "touched": "2026-11-02T21:16+09:00",
+   "idle_sec": 38,
+   "steps": 75,
    "last": ""
   },
   {
@@ -481,9 +481,9 @@
    "detail": "판정 반영(반응 1~3줄·인물 버릇·허수아비 선택지 제거) + 나란·할드리크·에르데네·비앙카·사야·게르다·유디트·레비아·우르다",
    "state": "running",
    "started": "2026-11-02T19:30+09:00",
-   "touched": "2026-11-02T21:13+09:00",
-   "idle_sec": 18,
-   "steps": 26,
+   "touched": "2026-11-02T21:16+09:00",
+   "idle_sec": 17,
+   "steps": 30,
    "last": ""
   },
   {
@@ -495,7 +495,7 @@
    "state": "done",
    "started": "2026-10-31T16:19+09:00",
    "touched": "2026-11-02T21:04+09:00",
-   "idle_sec": 558,
+   "idle_sec": 740,
    "steps": 77,
    "last": ""
   },
@@ -508,7 +508,7 @@
    "state": "done",
    "started": "2026-11-02T20:34+09:00",
    "touched": "2026-11-02T21:07+09:00",
-   "idle_sec": 388,
+   "idle_sec": 571,
    "steps": 57,
    "last": ""
   }
@@ -595,5 +595,5 @@
   "pck_sha256": "19ffc365942b2f54b030c070fd79eedbc02992deec5661d3538106846cbce8bf",
   "wasm_sha256": "fc74679e3b97f76878947fcd4fbe1268cbfa6188182a2e33bbc3f5dc9bfa57d0"
  },
- "generated": "2026-11-02T21:13:58+09:00"
+ "generated": "2026-11-02T21:17:00+09:00"
 }
