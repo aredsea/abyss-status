@@ -84,7 +84,7 @@ code{font-family:var(--f-mono);font-size:13px;background:var(--card);padding:1px
 
 <section id="done" role="tabpanel" hidden>
   <h2>끝난 작업</h2>
-  <p class="lead">커밋까지 마친 것만 올린다. 앞의 6개는 공개 main(acb1a4a)에 반영됐고, 뒤의 3개는 검사 통과 뒤 반영한다. 게임: <a href="https://aredsea.github.io/into-the-abyss-web/">aredsea.github.io/into-the-abyss-web</a></p>
+  <p class="lead">커밋까지 마친 것만 올린다. 모두 공개 main(b3e9d2d)에 반영됐다. 게임: <a href="https://aredsea.github.io/into-the-abyss-web/">aredsea.github.io/into-the-abyss-web</a></p>
   <div id="donelist"></div>
 </section>
 
@@ -99,7 +99,7 @@ code{font-family:var(--f-mono);font-size:13px;background:var(--card);padding:1px
 
 <script>
 const S = {
-  updated: "2026-11-02 20:32",
+  updated: "2026-11-02 20:40",
   goals: [
     ["원본 봇 기능 전부(1차 목표)", "대조표 3,860행(데이터 항목 제외 2,276행): 같음 67 · 일부 349 · 없음 242 · 미확인 1,599 · 제외 319. 함수 기준 확인된 완성은 아직 낮음 — 10개 묶음으로 채우는 중", 3],
     ["적 데이터·적 도트 100종", "원본 봇 적 정의·행동을 옮기고, 적마다 픽셀 도트를 따로 그림", 100],
@@ -127,10 +127,11 @@ const S = {
     ["L 2차 · 대사 다듬기 + 9명 추가 (sol)", "Claude 판정 반영(반응 1~3줄·인물 버릇·허수아비 선택지 제거·장면 3~5줄) + 나란·할드리크·에르데네·비앙카·사야·게르다·유디트·레비아·우르다", "run", "실행 중"],
     ["Q1 · 대조표 미확인 행 확인 (luna)", "마을·던전·도감·상태 등 20개 원본 파일의 미확인 행을 같음/일부/없음으로 판정", "run", "실행 중"],
     ["P1 · 페르소나·첫 시작·저장 토대 (sol)", "원본 60-create·26-start·74-level·75-sortie: 유저 캐릭터 만들기(종족·출신·10직업·포인트·시나리오·첫 동료), 자기 참전/지휘, 옛 저장 무손실 이관", "run", "실행 중"],
-    ["합친 판 검사·웹 빌드", "마을 5차 + 전투 4차 합친 판: 검사 30종 → 웹 export → 5개 화면 크기 실행 확인 → 통과하면 공개 main", "run", "실행 중"]
+    ["D 6차 · 카드 사건·영입 무작위·NPC 호감·대사 재생기 (terra)", "원본 카드 사건 전체, 영입 주선 난수, 여관·전투 호감 훅 + 미리 쓴 선택지 대사를 여관 대화하기·던전 짧은 말에 연결(시범 3명부터)", "run", "실행 중"]
   ],
   waiting: [],
   log: [
+    ["11-02 20:40", "마을 5차 + 전투 4차 합친 판: 검사 30종 실패 0, 웹 5개 크기 실행 통과 → 공개 main 반영(b3e9d2d, ui_build r21-d-town-20261102). D 6차(terra) 시작"],
     ["11-02 20:32", "GPT 모델별 분담 시작: sol=전투·토대, terra=마을 규칙·대사 작성, luna=대사 검수·대조표 확인. luna 로 대조표 미확인 행 확인 시작"],
     ["11-02 20:25", "기능 대조표 완료: 원본 Lua 18,795줄 전부 읽고 3,860행 색인. 남은 일을 10개 묶음(P1~P10)으로 나눔. P1(페르소나·첫 시작·저장) 시작"],
     ["11-02 20:20", "A 4차 완료: Opus 지적 8건 수정, 기각 0(원본 재현 수치 90/6·68·490999122 등 검수자 재현값과 일치 확인). 마을 5차: 패배·승리 문구 잘림 해결, 원본 연구 편집 규칙(Lua 13,843/13,843). 대사 시범 3명 완료(여관 84장면·선택지 252·던전 252), Claude 판정: 자연스러우나 반응이 짧고 인물 버릇이 약함 → 2차에서 보강"],
@@ -157,12 +158,12 @@ const S = {
     ["마을 5차(결과 문구·연구 규칙)", "r21-d-town · 15ecfbc", "패배 문구 전체 표시, 원본 연구 조합·강화·저장 Lua 13,843/13,843"],
     ["동료 대사 시범 3명", "r21-dialogue · 1e5d4cb", "힐데가·마르셀린·테이리스 여관 84장면, 던전 252줄, 단계 변화 42장면"]
   ],
-  testlead: "11-01 14:40, 마을 4차 + A 3차를 합친 r21-d-town 에서 Godot 4.7.2 로 직접 실행. 28종 모두 종료 코드 0, 스크립트 오류 0.",
+  testlead: "11-02 20:38, 마을 5차 + 전투 4차를 합친 r21-d-town 에서 Godot 4.7.2 로 직접 실행. 30종 모두 종료 코드 0, 스크립트 오류 0. 웹 빌드 후 360·360(동작 줄임)·390×664·1280×800·430×932 실행 통과.",
   tests: [
     ["import", "", 0, ""],["world_test",44,0,""],["state_test",54,0,""],["route_test",41,0,""],["expansion_test",3350,0,""],
     ["motion_test","",0,"PASS"],["motion_asset_test","",0,"19 clips"],["art_test","",0,"30명"],["export_licenses","",0,""],
     ["data_r21_test",7493,0,""],["dungeon_r21_test",3018,0,"1~420층"],["enemy_action_r21_test",2878,0,"1,221/1,221 일치"],
-    ["enemy_regression_r21_test",30,0,""],["enemy_review_r21_test",148,0,"Opus 가 이 시험의 거짓 통과를 지적 → A 4차에서 수정 중"],
+    ["enemy_regression_r21_test",30,0,""],["enemy_review_r21_test",354,0,"4차: Opus 지적 8건 원본 대조"],["persona_research_r21_test",13886,0,"Lua 13,843/13,843"],["ui_town_r21_round5_test",2270,0,"연구 화면"],
     ["town_r21_test",2675,0,"Lua 2,544"],["town_commerce_r21_test",14714,0,"Lua 8,520/8,520"],
     ["ui_battle_r17_test",6085,0,""],["ui_battle_r18_test",4592,0,""],["ui_battle_r19_test",859,0,""],["ui_battle_r20_test",1659,0,""],
     ["motion_r9_integration",944,0,""],["motion_r18_integration",3540,0,""],["ui_data_r21_test",9608,0,"이름표 넘침 0"],
