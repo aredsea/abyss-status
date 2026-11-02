@@ -392,9 +392,9 @@
    "detail": "보호막 회복 경로, 동료 사망 시 버프 제거·훅, 구원 순서, 성벽 회복 반올림, 사제 자기 구원, 사망 뒤 같은 틱 처리",
    "state": "running",
    "started": "2026-10-31T16:19+09:00",
-   "touched": "2026-11-02T20:33+09:00",
-   "idle_sec": 8,
-   "steps": 46,
+   "touched": "2026-11-02T20:34+09:00",
+   "idle_sec": 1,
+   "steps": 48,
    "last": ""
   },
   {
@@ -405,9 +405,9 @@
    "detail": "유저 캐릭터 만들기(종족·출신·10직업·포인트·시나리오·첫 동료), 자기 참전/지휘, 옛 저장 무손실 이관",
    "state": "running",
    "started": "2026-11-02T20:19+09:00",
-   "touched": "2026-11-02T20:33+09:00",
-   "idle_sec": 16,
-   "steps": 49,
+   "touched": "2026-11-02T20:34+09:00",
+   "idle_sec": 19,
+   "steps": 52,
    "last": ""
   },
   {
@@ -419,7 +419,7 @@
    "state": "running",
    "started": "2026-11-02T19:30+09:00",
    "touched": "2026-11-02T20:33+09:00",
-   "idle_sec": 0,
+   "idle_sec": 60,
    "steps": 17,
    "last": ""
   },
@@ -431,9 +431,9 @@
    "detail": "원본 카드 사건, 영입 주선 난수, 여관·전투 호감 훅 + 선택지 대사를 여관·던전에 연결",
    "state": "running",
    "started": "2026-10-31T16:19+09:00",
-   "touched": "2026-11-02T20:33+09:00",
-   "idle_sec": 0,
-   "steps": 53,
+   "touched": "2026-11-02T20:34+09:00",
+   "idle_sec": 14,
+   "steps": 54,
    "last": ""
   },
   {
@@ -442,7 +442,12 @@
    "model": "gpt-6.1-terra",
    "hero": "berenga",
    "detail": "도트 애니메이션·세계관 외형·실시간 갱신·버그 신고",
-   "state": "waiting"
+   "state": "running",
+   "started": "2026-11-02T20:34+09:00",
+   "touched": "2026-11-02T20:34+09:00",
+   "idle_sec": 1,
+   "steps": 4,
+   "last": ""
   }
  ],
  "commits": [
@@ -526,5 +531,5 @@
   "pck_sha256": "b67ccc519f695f4b0c6b09805199cd09f29ceba6ba835d1d917deb3aebfe091f",
   "wasm_sha256": "fc74679e3b97f76878947fcd4fbe1268cbfa6188182a2e33bbc3f5dc9bfa57d0"
  },
- "generated": "2026-11-02T20:33:25+09:00"
+ "generated": "2026-11-02T20:34:25+09:00"
 }
