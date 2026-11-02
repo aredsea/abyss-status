@@ -525,9 +525,9 @@
    "review_findings": 6,
    "state": "running",
    "started": "2026-10-31T16:19+09:00",
-   "touched": "2026-11-02T21:46+09:00",
-   "idle_sec": 39,
-   "steps": 84,
+   "touched": "2026-11-02T21:47+09:00",
+   "idle_sec": 5,
+   "steps": 85,
    "last": ""
   },
   {
@@ -539,7 +539,7 @@
    "state": "running",
    "started": "2026-11-02T20:19+09:00",
    "touched": "2026-11-02T21:47+09:00",
-   "idle_sec": 6,
+   "idle_sec": 18,
    "steps": 23,
    "last": ""
   },
@@ -552,7 +552,7 @@
    "state": "running",
    "started": "2026-11-02T19:30+09:00",
    "touched": "2026-11-02T21:44+09:00",
-   "idle_sec": 184,
+   "idle_sec": 196,
    "steps": 15,
    "last": ""
   },
@@ -565,7 +565,7 @@
    "state": "running",
    "started": "2026-10-31T16:19+09:00",
    "touched": "2026-11-02T21:47+09:00",
-   "idle_sec": 7,
+   "idle_sec": 19,
    "steps": 73,
    "last": ""
   },
@@ -577,8 +577,8 @@
    "detail": "비밀 키 없이: 서버가 계정 코드·쓰기 PIN 발급, 저장 내용을 서버가 직접 검사, 다른 기기 충돌 해결, 최근 10개 되돌리기, 자동 동기화, 순위는 서버가 계산. 별도 Cloudflare Worker",
    "state": "running",
    "started": "2026-11-02T21:25+09:00",
-   "touched": "2026-11-02T21:46+09:00",
-   "idle_sec": 14,
+   "touched": "2026-11-02T21:47+09:00",
+   "idle_sec": 11,
    "steps": 88,
    "last": ""
   }
@@ -665,5 +665,5 @@
   "pck_sha256": "ea9f0f8cd5f5f496d848930fd24778ebd2b17f1f544bfbb82dc208dc67eb220c",
   "wasm_sha256": "fc74679e3b97f76878947fcd4fbe1268cbfa6188182a2e33bbc3f5dc9bfa57d0"
  },
- "generated": "2026-11-02T21:47:14+09:00"
+ "generated": "2026-11-02T21:47:26+09:00"
 }
