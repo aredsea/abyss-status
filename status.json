@@ -812,7 +812,7 @@
    "state": "done",
    "started": "2026-10-31T16:19+09:00",
    "touched": "2026-11-03T01:30+09:00",
-   "idle_sec": 6489,
+   "idle_sec": 6671,
    "steps": 103,
    "last": ""
   },
@@ -824,9 +824,9 @@
    "detail": "원본과 같아진 전투 엔진(CTB·30명 기술·장비·페르소나 참전·전투 영어)을 공개판에 합치고 원정·정산·연대기·대사·클라우드와 맞물림 확인",
    "state": "running",
    "started": "2026-10-31T16:19+09:00",
-   "touched": "2026-11-03T03:17+09:00",
-   "idle_sec": 53,
-   "steps": 101,
+   "touched": "2026-11-03T03:21+09:00",
+   "idle_sec": 1,
+   "steps": 114,
    "last": ""
   }
  ],
@@ -909,8 +909,8 @@
   "build": "torva-art-20261027-r4b",
   "ui_build": "r21-d-town-20261103c",
   "engine": "Godot 4.7.2",
-  "pck_sha256": "57fe6ba86905a8313863191296f7afd1d93866081e5d1564978049eab8bdbd6e",
+  "pck_sha256": "44de5b5123532624943381ba37da8c8fd553fd05f81b9be2f1edfae8e2440e5b",
   "wasm_sha256": "fc74679e3b97f76878947fcd4fbe1268cbfa6188182a2e33bbc3f5dc9bfa57d0"
  },
- "generated": "2026-11-03T03:18:40+09:00"
+ "generated": "2026-11-03T03:21:43+09:00"
 }
