@@ -812,7 +812,7 @@
    "state": "done",
    "started": "2026-10-31T16:19+09:00",
    "touched": "2026-11-03T01:30+09:00",
-   "idle_sec": 4835,
+   "idle_sec": 4843,
    "steps": 103,
    "last": ""
   },
@@ -825,8 +825,8 @@
    "state": "running",
    "started": "2026-10-31T16:19+09:00",
    "touched": "2026-11-03T02:51+09:00",
-   "idle_sec": 5,
-   "steps": 0,
+   "idle_sec": 1,
+   "steps": 3,
    "last": ""
   }
  ],
@@ -912,5 +912,5 @@
   "pck_sha256": "febb8b822df8bcc208331b4a13a43dc57b7561d9757b04ff6b130c7ff7d04b7a",
   "wasm_sha256": "fc74679e3b97f76878947fcd4fbe1268cbfa6188182a2e33bbc3f5dc9bfa57d0"
  },
- "generated": "2026-11-03T02:51:07+09:00"
+ "generated": "2026-11-03T02:51:15+09:00"
 }
