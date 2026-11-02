@@ -670,9 +670,9 @@
    "review_findings": 4,
    "state": "running",
    "started": "2026-10-31T16:19+09:00",
-   "touched": "2026-11-02T23:52+09:00",
-   "idle_sec": 84,
-   "steps": 155,
+   "touched": "2026-11-02T23:55+09:00",
+   "idle_sec": 5,
+   "steps": 156,
    "last": ""
   },
   {
@@ -684,8 +684,8 @@
    "state": "running",
    "started": "2026-11-02T19:30+09:00",
    "touched": "2026-11-02T23:54+09:00",
-   "idle_sec": 6,
-   "steps": 37,
+   "idle_sec": 25,
+   "steps": 38,
    "last": ""
   },
   {
@@ -696,9 +696,9 @@
    "detail": "P9b·P5·P6 을 마을 판에 합치고 저장 허용 목록을 최종 형식에 맞춤, 상태창 소수점·영어 탭 줄바꿈·영어/한국어 섞인 하단 탭 수정, 새 시작부터 클라우드 저장까지 한 흐름 시험",
    "state": "running",
    "started": "2026-10-31T16:19+09:00",
-   "touched": "2026-11-02T23:54+09:00",
-   "idle_sec": 0,
-   "steps": 71,
+   "touched": "2026-11-02T23:55+09:00",
+   "idle_sec": 10,
+   "steps": 75,
    "last": ""
   },
   {
@@ -710,9 +710,9 @@
    "detail": "새로 넣은 전역 상한을 IP 하나·주소 묶음 몇 개로 채워 모두를 막는 문제(P1 2), 동시 요청 우회, 코드만으로 주인 내려받기 차단, 옛 전투 저장 칸 무검사, 순위 시간 저축 24시간 상한, 보관 계정 삭제 허용",
    "state": "running",
    "started": "2026-11-02T22:13+09:00",
-   "touched": "2026-11-02T23:54+09:00",
-   "idle_sec": 2,
-   "steps": 1,
+   "touched": "2026-11-02T23:55+09:00",
+   "idle_sec": 6,
+   "steps": 11,
    "last": ""
   }
  ],
@@ -793,10 +793,10 @@
  ],
  "game": {
   "build": "torva-art-20261027-r4b",
-  "ui_build": "r21-d-town-20261102f",
+  "ui_build": "r21-d-town-20261103a",
   "engine": "Godot 4.7.2",
-  "pck_sha256": "673fbd668eaf9ab2573f73c132bc739d926b3de0c5b912fa4c04fd6354521ca0",
+  "pck_sha256": "d1c74f13608133d8b1040c9ff8c9851fb161a5745b5b438df1e77d89ca47184a",
   "wasm_sha256": "fc74679e3b97f76878947fcd4fbe1268cbfa6188182a2e33bbc3f5dc9bfa57d0"
  },
- "generated": "2026-11-02T23:54:12+09:00"
+ "generated": "2026-11-02T23:55:16+09:00"
 }
