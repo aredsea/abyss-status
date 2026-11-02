@@ -581,9 +581,9 @@
    "review_findings": 0,
    "state": "running",
    "started": "2026-10-31T16:19+09:00",
-   "touched": "2026-11-02T22:18+09:00",
-   "idle_sec": 4,
-   "steps": 44,
+   "touched": "2026-11-02T22:20+09:00",
+   "idle_sec": 6,
+   "steps": 48,
    "last": ""
   },
   {
@@ -594,9 +594,9 @@
    "detail": "원본 81-gear 장비 1,030종 효과·무작위 옵션·전설 장신구·proc 훅을 새 모듈로, 전투 연결 지점 목록까지(전투 파일은 P3 가 쓰는 중이라 연결은 다음 차수)",
    "state": "running",
    "started": "2026-11-02T20:19+09:00",
-   "touched": "2026-11-02T22:18+09:00",
-   "idle_sec": 7,
-   "steps": 0,
+   "touched": "2026-11-02T22:20+09:00",
+   "idle_sec": 39,
+   "steps": 11,
    "last": ""
   },
   {
@@ -608,7 +608,7 @@
    "state": "running",
    "started": "2026-11-02T19:30+09:00",
    "touched": "2026-11-02T22:17+09:00",
-   "idle_sec": 98,
+   "idle_sec": 221,
    "steps": 18,
    "last": ""
   },
@@ -620,9 +620,9 @@
    "detail": "P7 도감·상태창·장비 가방, P10 마을 장소·연대기를 마을 판에 의미 통합, 원정 준비의 전열/후열·경로 그림 칸·중복 초상 정리",
    "state": "running",
    "started": "2026-10-31T16:19+09:00",
-   "touched": "2026-11-02T22:18+09:00",
-   "idle_sec": 2,
-   "steps": 19,
+   "touched": "2026-11-02T22:20+09:00",
+   "idle_sec": 0,
+   "steps": 26,
    "last": ""
   },
   {
@@ -633,9 +633,9 @@
    "detail": "원본 77-explore 탐색 사건 전체, 휴식, 보급품, 다음 층 연속 하강, 정산·이중 정산 방지, 원정 중 시너지 보정",
    "state": "running",
    "started": "2026-11-02T21:25+09:00",
-   "touched": "2026-11-02T22:18+09:00",
-   "idle_sec": 0,
-   "steps": 65,
+   "touched": "2026-11-02T22:20+09:00",
+   "idle_sec": 19,
+   "steps": 72,
    "last": ""
   },
   {
@@ -647,9 +647,9 @@
    "review_findings": 11,
    "state": "running",
    "started": "2026-11-02T22:13+09:00",
-   "touched": "2026-11-02T22:18+09:00",
-   "idle_sec": 28,
-   "steps": 22,
+   "touched": "2026-11-02T22:20+09:00",
+   "idle_sec": 14,
+   "steps": 31,
    "last": ""
   }
  ],
@@ -735,5 +735,5 @@
   "pck_sha256": "65be77a8a9bed274380e61c4063923f7f76a9518b7bbf9229a17b0b45f516f65",
   "wasm_sha256": "fc74679e3b97f76878947fcd4fbe1268cbfa6188182a2e33bbc3f5dc9bfa57d0"
  },
- "generated": "2026-11-02T22:18:50+09:00"
+ "generated": "2026-11-02T22:20:53+09:00"
 }
