@@ -776,9 +776,9 @@
    "review_findings": 4,
    "state": "running",
    "started": "2026-10-31T16:19+09:00",
-   "touched": "2026-11-03T01:19+09:00",
-   "idle_sec": 31,
-   "steps": 84,
+   "touched": "2026-11-03T01:23+09:00",
+   "idle_sec": 0,
+   "steps": 90,
    "last": ""
   },
   {
@@ -789,9 +789,9 @@
    "detail": "옛 정산 모양 4칸 무검증 차단(P1), 분산 IP 저장소 채우기에 대한 전역 일일 상한(P1), 배포 체크리스트·의존성 고정",
    "state": "running",
    "started": "2026-10-31T16:19+09:00",
-   "touched": "2026-11-03T01:20+09:00",
-   "idle_sec": 3,
-   "steps": 47,
+   "touched": "2026-11-03T01:22+09:00",
+   "idle_sec": 52,
+   "steps": 54,
    "last": ""
   }
  ],
@@ -877,5 +877,5 @@
   "pck_sha256": "a84fb88019cf8d0895f001da35d502371fc6521a09dd040671e6ef3c83f0825c",
   "wasm_sha256": "fc74679e3b97f76878947fcd4fbe1268cbfa6188182a2e33bbc3f5dc9bfa57d0"
  },
- "generated": "2026-11-03T01:20:26+09:00"
+ "generated": "2026-11-03T01:23:29+09:00"
 }
