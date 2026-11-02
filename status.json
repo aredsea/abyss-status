@@ -547,11 +547,11 @@
    "hero": "hildegard",
    "detail": "먼저 Opus 지적 6건(MP 이중 회복·옛 원정 규칙·연쇄 폭발 등), 이어서 남은 라운드 훅·연출 사건 18종·기술 포함 전체 전투 대조",
    "review_findings": 6,
-   "state": "running",
+   "state": "done",
    "started": "2026-10-31T16:19+09:00",
-   "touched": "2026-11-02T22:05+09:00",
-   "idle_sec": 22,
-   "steps": 109,
+   "touched": "2026-11-02T22:08+09:00",
+   "idle_sec": 25,
+   "steps": 111,
    "last": ""
   },
   {
@@ -562,9 +562,9 @@
    "detail": "원본 67-settings(난이도·연출·안전한 초기화), 한국어/영어 전환(영문 정본만), 이름 뒤 조사 자동, 힐데가 등 원본 표기",
    "state": "running",
    "started": "2026-11-02T20:19+09:00",
-   "touched": "2026-11-02T22:04+09:00",
-   "idle_sec": 45,
-   "steps": 56,
+   "touched": "2026-11-02T22:08+09:00",
+   "idle_sec": 41,
+   "steps": 58,
    "last": ""
   },
   {
@@ -576,7 +576,7 @@
    "state": "running",
    "started": "2026-11-02T19:30+09:00",
    "touched": "2026-11-02T22:04+09:00",
-   "idle_sec": 47,
+   "idle_sec": 230,
    "steps": 17,
    "last": ""
   },
@@ -589,7 +589,7 @@
    "state": "done",
    "started": "2026-10-31T16:19+09:00",
    "touched": "2026-11-02T22:00+09:00",
-   "idle_sec": 300,
+   "idle_sec": 482,
    "steps": 97,
    "last": ""
   },
@@ -601,9 +601,9 @@
    "detail": "원본 77-explore 탐색 사건 전체, 휴식, 보급품, 다음 층 연속 하강, 정산·이중 정산 방지, 원정 중 시너지 보정",
    "state": "running",
    "started": "2026-11-02T21:25+09:00",
-   "touched": "2026-11-02T22:05+09:00",
-   "idle_sec": 9,
-   "steps": 30,
+   "touched": "2026-11-02T22:08+09:00",
+   "idle_sec": 14,
+   "steps": 36,
    "last": ""
   }
  ],
@@ -689,5 +689,5 @@
   "pck_sha256": "65be77a8a9bed274380e61c4063923f7f76a9518b7bbf9229a17b0b45f516f65",
   "wasm_sha256": "fc74679e3b97f76878947fcd4fbe1268cbfa6188182a2e33bbc3f5dc9bfa57d0"
  },
- "generated": "2026-11-02T22:05:41+09:00"
+ "generated": "2026-11-02T22:08:43+09:00"
 }
