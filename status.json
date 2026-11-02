@@ -456,8 +456,8 @@
    "state": "running",
    "started": "2026-10-31T16:19+09:00",
    "touched": "2026-11-02T21:10+09:00",
-   "idle_sec": 0,
-   "steps": 1,
+   "idle_sec": 1,
+   "steps": 10,
    "last": ""
   },
   {
@@ -469,7 +469,7 @@
    "state": "running",
    "started": "2026-11-02T20:19+09:00",
    "touched": "2026-11-02T21:10+09:00",
-   "idle_sec": 5,
+   "idle_sec": 39,
    "steps": 61,
    "last": ""
   },
@@ -482,7 +482,7 @@
    "state": "running",
    "started": "2026-11-02T19:30+09:00",
    "touched": "2026-11-02T21:09+09:00",
-   "idle_sec": 33,
+   "idle_sec": 67,
    "steps": 23,
    "last": ""
   },
@@ -495,7 +495,7 @@
    "state": "done",
    "started": "2026-10-31T16:19+09:00",
    "touched": "2026-11-02T21:04+09:00",
-   "idle_sec": 342,
+   "idle_sec": 375,
    "steps": 77,
    "last": ""
   },
@@ -508,7 +508,7 @@
    "state": "done",
    "started": "2026-11-02T20:34+09:00",
    "touched": "2026-11-02T21:07+09:00",
-   "idle_sec": 172,
+   "idle_sec": 206,
    "steps": 57,
    "last": ""
   }
@@ -595,5 +595,5 @@
   "pck_sha256": "19ffc365942b2f54b030c070fd79eedbc02992deec5661d3538106846cbce8bf",
   "wasm_sha256": "fc74679e3b97f76878947fcd4fbe1268cbfa6188182a2e33bbc3f5dc9bfa57d0"
  },
- "generated": "2026-11-02T21:10:22+09:00"
+ "generated": "2026-11-02T21:10:56+09:00"
 }
