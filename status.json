@@ -493,7 +493,7 @@
    "state": "running",
    "started": "2026-10-31T16:19+09:00",
    "touched": "2026-11-02T21:25+09:00",
-   "idle_sec": 6,
+   "idle_sec": 33,
    "steps": 50,
    "last": ""
   },
@@ -506,7 +506,7 @@
    "state": "running",
    "started": "2026-11-02T20:19+09:00",
    "touched": "2026-11-02T21:25+09:00",
-   "idle_sec": 17,
+   "idle_sec": 51,
    "steps": 17,
    "last": ""
   },
@@ -519,7 +519,7 @@
    "state": "running",
    "started": "2026-11-02T19:30+09:00",
    "touched": "2026-11-02T21:25+09:00",
-   "idle_sec": 0,
+   "idle_sec": 33,
    "steps": 48,
    "last": ""
   },
@@ -531,9 +531,9 @@
    "detail": "P1 페르소나와 7차 성장 기록을 하나로, 새 시작→만들기→첫 만남→대화→영입→출전→정산 한 흐름 시험, 시안 원정 준비 화면에 자기 참전/지휘",
    "state": "running",
    "started": "2026-10-31T16:19+09:00",
-   "touched": "2026-11-02T21:24+09:00",
-   "idle_sec": 37,
-   "steps": 26,
+   "touched": "2026-11-02T21:26+09:00",
+   "idle_sec": 6,
+   "steps": 27,
    "last": ""
   },
   {
@@ -544,9 +544,9 @@
    "detail": "비밀 키 없이: 서버가 계정 코드·쓰기 PIN 발급, 저장 내용을 서버가 직접 검사, 다른 기기 충돌 해결, 최근 10개 되돌리기, 자동 동기화, 순위는 서버가 계산. 별도 Cloudflare Worker",
    "state": "running",
    "started": "2026-11-02T21:25+09:00",
-   "touched": "2026-11-02T21:25+09:00",
-   "idle_sec": 5,
-   "steps": 0,
+   "touched": "2026-11-02T21:26+09:00",
+   "idle_sec": 0,
+   "steps": 11,
    "last": ""
   }
  ],
@@ -632,5 +632,5 @@
   "pck_sha256": "19ffc365942b2f54b030c070fd79eedbc02992deec5661d3538106846cbce8bf",
   "wasm_sha256": "fc74679e3b97f76878947fcd4fbe1268cbfa6188182a2e33bbc3f5dc9bfa57d0"
  },
- "generated": "2026-11-02T21:25:33+09:00"
+ "generated": "2026-11-02T21:26:07+09:00"
 }
