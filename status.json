@@ -883,7 +883,7 @@
    "state": "done",
    "started": "2026-11-03T05:17+09:00",
    "touched": "2026-11-03T08:23+09:00",
-   "idle_sec": 125,
+   "idle_sec": 307,
    "steps": 103,
    "last": ""
   },
@@ -896,7 +896,7 @@
    "state": "done",
    "started": "2026-10-31T16:19+09:00",
    "touched": "2026-11-03T04:51+09:00",
-   "idle_sec": 12836,
+   "idle_sec": 13018,
    "steps": 43,
    "last": ""
   }
@@ -980,8 +980,8 @@
   "build": "torva-art-20261027-r4b",
   "ui_build": "r21-d-town-20261103c",
   "engine": "Godot 4.7.2",
-  "pck_sha256": "d5009ca3c600506108a6c94fa7ec490389c1d2e158720a6e1a0e2cfd64f3ab9f",
+  "pck_sha256": "572d1192593c9dacdb6a8b195ea2bd699d91847df810099b3b30b5dde92987b0",
   "wasm_sha256": "fc74679e3b97f76878947fcd4fbe1268cbfa6188182a2e33bbc3f5dc9bfa57d0"
  },
- "generated": "2026-11-03T08:25:53+09:00"
+ "generated": "2026-11-03T08:28:56+09:00"
 }
