@@ -842,7 +842,7 @@
    "state": "done",
    "started": "2026-10-31T16:19+09:00",
    "touched": "2026-11-03T04:51+09:00",
-   "idle_sec": 109,
+   "idle_sec": 228,
    "steps": 43,
    "last": ""
   },
@@ -854,9 +854,9 @@
    "detail": "모든 갈래가 공개 main 하나로 합쳐진 상태로 원본 3,860행을 다시 매겨 1차 목표 진척을 다시 계산",
    "state": "running",
    "started": "2026-11-02T23:02+09:00",
-   "touched": "2026-11-03T04:53+09:00",
-   "idle_sec": 21,
-   "steps": 42,
+   "touched": "2026-11-03T04:55+09:00",
+   "idle_sec": 15,
+   "steps": 50,
    "last": ""
   }
  ],
@@ -942,5 +942,5 @@
   "pck_sha256": "d5009ca3c600506108a6c94fa7ec490389c1d2e158720a6e1a0e2cfd64f3ab9f",
   "wasm_sha256": "fc74679e3b97f76878947fcd4fbe1268cbfa6188182a2e33bbc3f5dc9bfa57d0"
  },
- "generated": "2026-11-03T04:53:46+09:00"
+ "generated": "2026-11-03T04:55:45+09:00"
 }
