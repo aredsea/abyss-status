@@ -525,9 +525,9 @@
    "review_findings": 6,
    "state": "running",
    "started": "2026-10-31T16:19+09:00",
-   "touched": "2026-11-02T21:47+09:00",
-   "idle_sec": 5,
-   "steps": 85,
+   "touched": "2026-11-02T21:50+09:00",
+   "idle_sec": 8,
+   "steps": 91,
    "last": ""
   },
   {
@@ -538,9 +538,9 @@
    "detail": "원본 67-settings(난이도·연출·안전한 초기화), 한국어/영어 전환(영문 정본만), 이름 뒤 조사 자동, 힐데가 등 원본 표기",
    "state": "running",
    "started": "2026-11-02T20:19+09:00",
-   "touched": "2026-11-02T21:47+09:00",
-   "idle_sec": 18,
-   "steps": 23,
+   "touched": "2026-11-02T21:50+09:00",
+   "idle_sec": 2,
+   "steps": 32,
    "last": ""
   },
   {
@@ -551,9 +551,9 @@
    "detail": "리네트·펠리체·소렐·티카·헤드비히·베렌가·군힐트·바르굿·알탄. 판정 반영: 시처럼 꾸민 여운 문장 금지, 단문 인물도 대화가 이어지게",
    "state": "running",
    "started": "2026-11-02T19:30+09:00",
-   "touched": "2026-11-02T21:44+09:00",
-   "idle_sec": 196,
-   "steps": 15,
+   "touched": "2026-11-02T21:48+09:00",
+   "idle_sec": 97,
+   "steps": 16,
    "last": ""
   },
   {
@@ -564,9 +564,9 @@
    "detail": "P1 페르소나와 7차 성장 기록을 하나로, 새 시작→만들기→첫 만남→대화→영입→출전→정산 한 흐름 시험, 시안 원정 준비 화면에 자기 참전/지휘",
    "state": "running",
    "started": "2026-10-31T16:19+09:00",
-   "touched": "2026-11-02T21:47+09:00",
-   "idle_sec": 19,
-   "steps": 73,
+   "touched": "2026-11-02T21:50+09:00",
+   "idle_sec": 4,
+   "steps": 79,
    "last": ""
   },
   {
@@ -577,9 +577,9 @@
    "detail": "비밀 키 없이: 서버가 계정 코드·쓰기 PIN 발급, 저장 내용을 서버가 직접 검사, 다른 기기 충돌 해결, 최근 10개 되돌리기, 자동 동기화, 순위는 서버가 계산. 별도 Cloudflare Worker",
    "state": "running",
    "started": "2026-11-02T21:25+09:00",
-   "touched": "2026-11-02T21:47+09:00",
-   "idle_sec": 11,
-   "steps": 88,
+   "touched": "2026-11-02T21:50+09:00",
+   "idle_sec": 3,
+   "steps": 99,
    "last": ""
   }
  ],
@@ -662,8 +662,8 @@
   "build": "torva-art-20261027-r4b",
   "ui_build": "r21-d-town-20261102d",
   "engine": "Godot 4.7.2",
-  "pck_sha256": "ea9f0f8cd5f5f496d848930fd24778ebd2b17f1f544bfbb82dc208dc67eb220c",
+  "pck_sha256": "b31fda34d296fddff3e54bf4240044ba4e180fdd106d51eb3f2bfe2df665c506",
   "wasm_sha256": "fc74679e3b97f76878947fcd4fbe1268cbfa6188182a2e33bbc3f5dc9bfa57d0"
  },
- "generated": "2026-11-02T21:47:26+09:00"
+ "generated": "2026-11-02T21:50:29+09:00"
 }
