@@ -854,7 +854,7 @@
    "state": "running",
    "started": "2026-11-03T05:17+09:00",
    "touched": "2026-11-03T06:23+09:00",
-   "idle_sec": 30,
+   "idle_sec": 10,
    "steps": 134,
    "last": ""
   },
@@ -866,9 +866,9 @@
    "detail": "1차에서 77행 중 31행 원본 일치·16행 수정(상점 호감·덤·상한, 제련 비용, 여관 호감 표시 등). 남은 46행 + 상점 새 필드 서버 허용",
    "state": "running",
    "started": "2026-11-03T05:17+09:00",
-   "touched": "2026-11-03T06:23+09:00",
+   "touched": "2026-11-03T06:24+09:00",
    "idle_sec": 0,
-   "steps": 1,
+   "steps": 6,
    "last": ""
   },
   {
@@ -880,7 +880,7 @@
    "state": "running",
    "started": "2026-11-03T05:17+09:00",
    "touched": "2026-11-03T06:23+09:00",
-   "idle_sec": 4,
+   "idle_sec": 19,
    "steps": 25,
    "last": ""
   },
@@ -893,7 +893,7 @@
    "state": "running",
    "started": "2026-11-03T05:17+09:00",
    "touched": "2026-11-03T06:22+09:00",
-   "idle_sec": 72,
+   "idle_sec": 87,
    "steps": 114,
    "last": ""
   }
@@ -980,5 +980,5 @@
   "pck_sha256": "d5009ca3c600506108a6c94fa7ec490389c1d2e158720a6e1a0e2cfd64f3ab9f",
   "wasm_sha256": "fc74679e3b97f76878947fcd4fbe1268cbfa6188182a2e33bbc3f5dc9bfa57d0"
  },
- "generated": "2026-11-03T06:23:54+09:00"
+ "generated": "2026-11-03T06:24:09+09:00"
 }
