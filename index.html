@@ -84,7 +84,7 @@ code{font-family:var(--f-mono);font-size:13px;background:var(--card);padding:1px
 
 <section id="done" role="tabpanel" hidden>
   <h2>끝난 작업</h2>
-  <p class="lead">커밋까지 마친 것만 올린다. 커밋 번호는 작업 브랜치 기준이며 main 에는 아직 합치지 않았다.</p>
+  <p class="lead">커밋까지 마친 것만 올린다. 아래 6개는 모두 공개 main(acb1a4a)에 반영됐다. 게임: <a href="https://aredsea.github.io/into-the-abyss-web/">aredsea.github.io/into-the-abyss-web</a></p>
   <div id="donelist"></div>
 </section>
 
@@ -99,7 +99,7 @@ code{font-family:var(--f-mono);font-size:13px;background:var(--card);padding:1px
 
 <script>
 const S = {
-  updated: "2026-11-02 19:31",
+  updated: "2026-11-02 19:40",
   goals: [
     ["원본 봇 기능 전부(1차 목표)", "45개 Lua 파일 기능 대조표 작성 중 — 끝나면 실제 완성도로 이 막대를 바꿈", 0],
     ["적 데이터·적 도트 100종", "원본 봇 적 정의·행동을 옮기고, 적마다 픽셀 도트를 따로 그림", 100],
@@ -113,7 +113,7 @@ const S = {
     "사용자 저장은 지우지 않고, 옛 저장은 이관",
     "성적 장면(79-sex.lua)은 이식하지 않음. AI 즉석 대사 자리는 미리 쓴 선택지 대화(호감 ±)로 채움",
     "모든 대사는 사장님 한국어 지침(KOREAN-WRITING.md)으로 검수 — 번역투·위화감 0, 인물별 화법 유지, 기질·성향 이름 노출 금지",
-    "웹 공개는 GitHub Pages(aredsea/into-the-abyss-web) 만. main 합치기는 사장님 허락 뒤"
+    "웹 공개는 GitHub Pages(aredsea/into-the-abyss-web) 만. 검사를 통과한 판만 main 에 올림"
   ],
   next: [
     ["기능 대조표", "원본 45개 파일 전부 기능별로 같음/일부/없음/제외 판정 + 남은 작업 6~10묶음 제안"],
@@ -122,7 +122,7 @@ const S = {
     ["A 4차 확인", "Opus 검수 8건 수정본을 검수자 재현 스크립트로 Claude 가 직접 재확인 → 커밋 → 마을 브랜치에 합침"],
     ["마을 D 5차", "남은 원본 규칙(페르소나 연구·카드 사건·영입 무작위·NPC 호감 훅) + 패배 화면 문구 잘림 수정"],
     ["합친 판 전체 검사·웹 빌드", "검사 28종 + 웹 5개 화면 크기 실행 확인"],
-    ["main 합치기", "사장님 허락을 받은 뒤에만"]
+    ["main 반영", "각 차수가 전체 검사·웹 실행 확인을 통과하면 공개 main 에 올림"]
   ],
   running: [
     ["L · 동료 대사 시범 3명", "힐데가르트·마르셀린·테이리스: 여관 선택지 대화(호감 단계별, 선택에 따라 호감 ±) + 던전 상황별 짧은 말 + 단계 변화 장면. 사장님 한국어 지침으로 자체 교정 → Claude 가 직접 읽고 판정 → 30명으로 확대", "run", "실행 중"],
@@ -130,11 +130,10 @@ const S = {
     ["A 4차 · 전투 원본 대조 수정", "Opus 검수 지적 8건(P1 3 · P2 5): 피해 감소 키 매핑, 거짓 통과 시험, 콜레트 봉인 회피, 성벽 턴, 같은 틱 소생, 사야 난수, 구원 보호막 보너스, 자하르 보정", "run", "실행 중"],
     ["마을 D 5차 · 남은 규칙", "원본 연구·카드 사건·영입·호감 훅 이식 + 패배 문구 잘림", "run", "실행 중"]
   ],
-  waiting: [
-    ["r18~r21 main 합치기", "작업 브랜치에만 있음. 공개 main 에 합칠지 사장님 답이 필요", "warn", "대기"]
-  ],
+  waiting: [],
   log: [
-    ["11-02 19:31", "동료 대사 작업 시작(시범 3명). 레인 4개 동시 진행"],
+    ["11-02 19:40", "공개 main 에 r18~r21 반영(f8f77dc → acb1a4a, 21커밋). 게임 사이트가 마을 4차 판으로 바뀜. 현황판을 GitHub Pages 로 옮김"],
+    ["11-02 19:31","동료 대사 작업 시작(시범 3명). 레인 4개 동시 진행"],
     ["11-02 19:29","1차 목표 변경: 원본 봇 기능 전부 그대로. 기능 전수 대조표 작업 시작"],
     ["11-02 19:27","마을 D 5차 시작(남은 원본 규칙 + 패배 문구 잘림). A 4차와 동시 진행"],
     ["11-02 19:20", "현황판 개설. 앞으로 작업이 끝날 때마다, 그리고 1시간마다 갱신"],
@@ -179,7 +178,8 @@ $("goals").innerHTML=S.goals.map(([t,d,p])=>`<div class="row">${pill(p>=100?"ok"
 $("rules").innerHTML=S.rules.map(r=>`<div class="row">${pill("red","규칙")}<div class="d" style="color:var(--ink)">${esc(r)}</div></div>`).join("");
 $("next").innerHTML=S.next.map(([t,d],i)=>`<div class="row">${pill("wait",(i+1)+"")}<div><div class="t">${esc(t)}</div><div class="d">${esc(d)}</div></div></div>`).join("");
 $("running").innerHTML=S.running.map(([t,d,k,s])=>`<div class="row">${pill(k,s)}<div><div class="t">${esc(t)}</div><div class="d">${esc(d)}</div></div></div>`).join("");
-$("waiting").innerHTML=S.waiting.map(([t,d,k,s])=>`<div class="row">${pill(k,s)}<div><div class="t">${esc(t)}</div><div class="d">${esc(d)}</div></div></div>`).join("");
+$("waiting").innerHTML=S.waiting.length?"":`<div class="row">${pill("ok","없음")}<div class="d">지금은 사장님 결정이 필요한 일이 없습니다.</div></div>`;
+if(S.waiting.length) $("waiting").innerHTML=S.waiting.map(([t,d,k,s])=>`<div class="row">${pill(k,s)}<div><div class="t">${esc(t)}</div><div class="d">${esc(d)}</div></div></div>`).join("");
 $("log").innerHTML=S.log.map(([w,t])=>`<div class="row"><time>${esc(w)}</time><div>${esc(t)}</div></div>`).join("");
 $("donelist").innerHTML=S.done.map(([t,c,d])=>`<div class="row">${pill("ok","완료")}<div><div class="t">${esc(t)}</div><div class="d"><code>${esc(c)}</code> ${esc(d)}</div></div></div>`).join("");
 $("testlead").textContent=S.testlead;
