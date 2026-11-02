@@ -812,7 +812,7 @@
    "state": "done",
    "started": "2026-10-31T16:19+09:00",
    "touched": "2026-11-03T01:30+09:00",
-   "idle_sec": 8877,
+   "idle_sec": 9059,
    "steps": 103,
    "last": ""
   },
@@ -822,11 +822,11 @@
    "model": "gpt-6.1-sol",
    "hero": "bargut",
    "detail": "원본과 같아진 전투 엔진(CTB·30명 기술·장비·페르소나 참전·전투 영어)을 공개판에 합치고 원정·정산·연대기·대사·클라우드와 맞물림 확인",
-   "state": "running",
+   "state": "done",
    "started": "2026-10-31T16:19+09:00",
-   "touched": "2026-11-03T03:57+09:00",
-   "idle_sec": 33,
-   "steps": 188,
+   "touched": "2026-11-03T04:01+09:00",
+   "idle_sec": 4,
+   "steps": 196,
    "last": ""
   }
  ],
@@ -912,5 +912,5 @@
   "pck_sha256": "d5009ca3c600506108a6c94fa7ec490389c1d2e158720a6e1a0e2cfd64f3ab9f",
   "wasm_sha256": "fc74679e3b97f76878947fcd4fbe1268cbfa6188182a2e33bbc3f5dc9bfa57d0"
  },
- "generated": "2026-11-03T03:58:28+09:00"
+ "generated": "2026-11-03T04:01:31+09:00"
 }
