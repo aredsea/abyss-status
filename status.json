@@ -1,0 +1,530 @@
+{
+ "updated": "2026-11-02 20:45",
+ "goal": "원본 캐릭터 봇(던전 봇)에 있는 기능을 모두 그대로 구현한다. 성적 장면(79-sex)·RisuAI 전용 기능만 제외. AI 즉석 대사 자리는 미리 쓴 선택지 대화(호감 ±)로 채운다.",
+ "goals": [
+  {
+   "title": "원본 봇 기능 전부(1차 목표)",
+   "detail": "대조표 3,860행(데이터 항목 제외 2,276행): 같음 67 · 일부 349 · 없음 242 · 미확인 1,599 · 제외 319. 함수 기준 확인된 완성은 아직 낮음 — 10개 묶음으로 채우는 중",
+   "pct": 3
+  },
+  {
+   "title": "적 데이터·적 도트 100종",
+   "detail": "원본 봇 적 정의·행동을 옮기고, 적마다 픽셀 도트를 따로 그림",
+   "pct": 100
+  },
+  {
+   "title": "동료 초상 30명",
+   "detail": "원본 얼굴·의상 그대로, 화면 칸 10종에 맞게 구도만 조정, 흰 테두리 0",
+   "pct": 100
+  },
+  {
+   "title": "던전 데이터",
+   "detail": "원본 77-explore 기준 층·탐색·휴식·보스 진행",
+   "pct": 90
+  },
+  {
+   "title": "마을 전체 UI = 시안",
+   "detail": "28패널 시안 외형 + 원본 규칙(상점·여관·연구·영입·카드)",
+   "pct": 70
+  }
+ ],
+ "rules": [
+  "원본 봇이 데이터 정본, 시안이 배치 정본. 원본에 없는 무기·자세·인물·재화·뽑기는 넣지 않음",
+  "초상·적 도트는 다시 그리지 않음. 원본 파일 96개 해시 불변",
+  "사용자 저장은 지우지 않고, 옛 저장은 이관",
+  "성적 장면(79-sex.lua)은 이식하지 않음. AI 즉석 대사 자리는 미리 쓴 선택지 대화(호감 ±)로 채움",
+  "모든 대사는 사장님 한국어 지침(KOREAN-WRITING.md)으로 검수 — 번역투·위화감 0, 인물별 화법 유지, 기질·성향 이름 노출 금지",
+  "웹 공개는 GitHub Pages(aredsea/into-the-abyss-web) 만. 검사를 통과한 판만 main 에 올림"
+ ],
+ "next": [
+  {
+   "title": "P1 페르소나·첫 시작·저장",
+   "detail": "실행 중. 다른 묶음의 토대"
+  },
+  {
+   "title": "P2 전투 CTB·난수·라운드·표시",
+   "detail": "A 5차 뒤 같은 갈래에서. 원본 harness.mjs·harness_raid.mjs 대조"
+  },
+  {
+   "title": "P3 30명 개인 기술·특성·시너지 / P4 장비 전투 효과·옵션",
+   "detail": "P2 뒤 두 갈래로 동시"
+  },
+  {
+   "title": "P5 던전 원정·정산 / P6 길드·영입·상점·여관·대장간 / P7 도감·상태·가방·호감·초상",
+   "detail": "P1·P3·P4 뒤"
+  },
+  {
+   "title": "P8 설정·한/영 / P9 클라우드 저장·순위 / P10 마을 장소·연대기",
+   "detail": "마지막 묶음"
+  },
+  {
+   "title": "동료 대사",
+   "detail": "9명씩 늘리며 매 차수 한국어 검수 → 여관(P6)·던전(P5)에 연결"
+  }
+ ],
+ "waiting": [],
+ "log": [
+  {
+   "at": "11-02 20:45",
+   "text": "Q1(luna) 끝: 784행 중 10행만 '없음'으로 확정(도감·상태 화면 기능), 나머지는 근거 부족으로 미확인 유지. luna 는 대조 판정에 약해서, 이후 대사 한국어 검수 쪽에 배치"
+  },
+  {
+   "at": "11-02 20:40",
+   "text": "마을 5차 + 전투 4차 합친 판: 검사 30종 실패 0, 웹 5개 크기 실행 통과 → 공개 main 반영(b3e9d2d, ui_build r21-d-town-20261102). D 6차(terra) 시작"
+  },
+  {
+   "at": "11-02 20:32",
+   "text": "GPT 모델별 분담 시작: sol=전투·토대, terra=마을 규칙·대사 작성, luna=대사 검수·대조표 확인. luna 로 대조표 미확인 행 확인 시작"
+  },
+  {
+   "at": "11-02 20:25",
+   "text": "기능 대조표 완료: 원본 Lua 18,795줄 전부 읽고 3,860행 색인. 남은 일을 10개 묶음(P1~P10)으로 나눔. P1(페르소나·첫 시작·저장) 시작"
+  },
+  {
+   "at": "11-02 20:20",
+   "text": "A 4차 완료: Opus 지적 8건 수정, 기각 0(원본 재현 수치 90/6·68·490999122 등 검수자 재현값과 일치 확인). 마을 5차: 패배·승리 문구 잘림 해결, 원본 연구 편집 규칙(Lua 13,843/13,843). 대사 시범 3명 완료(여관 84장면·선택지 252·던전 252), Claude 판정: 자연스러우나 반응이 짧고 인물 버릇이 약함 → 2차에서 보강"
+  },
+  {
+   "at": "11-02 19:40",
+   "text": "공개 main 에 r18~r21 반영(f8f77dc → acb1a4a, 21커밋). 게임 사이트가 마을 4차 판으로 바뀜. 현황판을 GitHub Pages 로 옮김"
+  },
+  {
+   "at": "11-02 19:31",
+   "text": "동료 대사 작업 시작(시범 3명). 레인 4개 동시 진행"
+  },
+  {
+   "at": "11-02 19:29",
+   "text": "1차 목표 변경: 원본 봇 기능 전부 그대로. 기능 전수 대조표 작업 시작"
+  },
+  {
+   "at": "11-02 19:27",
+   "text": "마을 D 5차 시작(남은 원본 규칙 + 패배 문구 잘림). A 4차와 동시 진행"
+  },
+  {
+   "at": "11-02 19:20",
+   "text": "현황판 개설. 앞으로 작업이 끝날 때마다, 그리고 1시간마다 갱신"
+  },
+  {
+   "at": "11-01 22:20",
+   "text": "A 4차 시작(Opus 검수 8건)"
+  },
+  {
+   "at": "11-01 22:15",
+   "text": "Opus 검수: 통합 불가, P1 3 · P2 5. P1 2건은 Claude 가 원본 줄로 확인"
+  },
+  {
+   "at": "11-01 22:03",
+   "text": "외부 검수 3라운드(Luna): P0 없음, P1 2건은 이번 수정 이전부터 있던 차이"
+  },
+  {
+   "at": "11-01 14:40",
+   "text": "마을 4차 + A 3차 합친 판 전체 검사 28종 실패 0"
+  },
+  {
+   "at": "11-01 14:20",
+   "text": "마을 4차 완료: 붓글씨 제목 18 · 수묵 배경 19 · 탐색 노드 지도. 비교 이미지 3장 전송"
+  }
+ ],
+ "done": [
+  {
+   "title": "적 도트 100종",
+   "ref": "r21-b-enemy-art · 501a976",
+   "detail": "1120×1400, 공통 32색, 등급별 크기 순서, 전체 시트 확인"
+  },
+  {
+   "title": "동료 초상 30명 · 칸 300개",
+   "ref": "r21-c-portraits · 1c1ef9f",
+   "detail": "흰 테두리 세 바탕 모두 0, 원본 해시 96/96"
+  },
+  {
+   "title": "적 데이터·행동 이식 2차",
+   "ref": "r21-a-data · 8a73a3e",
+   "detail": "적 행동 1,221건 원본과 100% 일치"
+  },
+  {
+   "title": "적 행동 3차(재검수 4건)",
+   "ref": "r21-a-data · 735a083",
+   "detail": "DOT 일반 피해 경로, DOT 회피, 예고 대상 저장, 빈 표본 단언"
+  },
+  {
+   "title": "마을 2·3차(규칙·상점)",
+   "ref": "r21-d-town · 7495349, afe6492",
+   "detail": "상점 규칙 Lua 8,520/8,520 일치, 25/28 패널"
+  },
+  {
+   "title": "마을 4차(시안 외형)",
+   "ref": "r21-d-town · 5e46681",
+   "detail": "붓글씨 제목 18, 수묵 배경 19(+1.9MB), 노드 지도, 27/28 패널 외형"
+  },
+  {
+   "title": "적 행동 4차(Opus 8건)",
+   "ref": "r21-a-data · 72bf1b2",
+   "detail": "피해 감소 키 분리, 콜레트 봉인 회피, 사야 난수, 구원 보호막 등 원본 대조 354항목 실패 0"
+  },
+  {
+   "title": "마을 5차(결과 문구·연구 규칙)",
+   "ref": "r21-d-town · 15ecfbc",
+   "detail": "패배 문구 전체 표시, 원본 연구 조합·강화·저장 Lua 13,843/13,843"
+  },
+  {
+   "title": "동료 대사 시범 3명",
+   "ref": "r21-dialogue · 1e5d4cb",
+   "detail": "힐데가·마르셀린·테이리스 여관 84장면, 던전 252줄, 단계 변화 42장면"
+  }
+ ],
+ "tests": {
+  "lead": "11-02 20:38, 마을 5차 + 전투 4차를 합친 r21-d-town 에서 Godot 4.7.2 로 직접 실행. 30종 모두 종료 코드 0, 스크립트 오류 0. 웹 빌드 후 360·360(동작 줄임)·390×664·1280×800·430×932 실행 통과.",
+  "rows": [
+   {
+    "name": "import",
+    "checks": "",
+    "fail": 0,
+    "note": ""
+   },
+   {
+    "name": "world_test",
+    "checks": 44,
+    "fail": 0,
+    "note": ""
+   },
+   {
+    "name": "state_test",
+    "checks": 54,
+    "fail": 0,
+    "note": ""
+   },
+   {
+    "name": "route_test",
+    "checks": 41,
+    "fail": 0,
+    "note": ""
+   },
+   {
+    "name": "expansion_test",
+    "checks": 3350,
+    "fail": 0,
+    "note": ""
+   },
+   {
+    "name": "motion_test",
+    "checks": "",
+    "fail": 0,
+    "note": "PASS"
+   },
+   {
+    "name": "motion_asset_test",
+    "checks": "",
+    "fail": 0,
+    "note": "19 clips"
+   },
+   {
+    "name": "art_test",
+    "checks": "",
+    "fail": 0,
+    "note": "30명"
+   },
+   {
+    "name": "export_licenses",
+    "checks": "",
+    "fail": 0,
+    "note": ""
+   },
+   {
+    "name": "data_r21_test",
+    "checks": 7493,
+    "fail": 0,
+    "note": ""
+   },
+   {
+    "name": "dungeon_r21_test",
+    "checks": 3018,
+    "fail": 0,
+    "note": "1~420층"
+   },
+   {
+    "name": "enemy_action_r21_test",
+    "checks": 2878,
+    "fail": 0,
+    "note": "1,221/1,221 일치"
+   },
+   {
+    "name": "enemy_regression_r21_test",
+    "checks": 30,
+    "fail": 0,
+    "note": ""
+   },
+   {
+    "name": "enemy_review_r21_test",
+    "checks": 354,
+    "fail": 0,
+    "note": "4차: Opus 지적 8건 원본 대조"
+   },
+   {
+    "name": "persona_research_r21_test",
+    "checks": 13886,
+    "fail": 0,
+    "note": "Lua 13,843/13,843"
+   },
+   {
+    "name": "ui_town_r21_round5_test",
+    "checks": 2270,
+    "fail": 0,
+    "note": "연구 화면"
+   },
+   {
+    "name": "town_r21_test",
+    "checks": 2675,
+    "fail": 0,
+    "note": "Lua 2,544"
+   },
+   {
+    "name": "town_commerce_r21_test",
+    "checks": 14714,
+    "fail": 0,
+    "note": "Lua 8,520/8,520"
+   },
+   {
+    "name": "ui_battle_r17_test",
+    "checks": 6085,
+    "fail": 0,
+    "note": ""
+   },
+   {
+    "name": "ui_battle_r18_test",
+    "checks": 4592,
+    "fail": 0,
+    "note": ""
+   },
+   {
+    "name": "ui_battle_r19_test",
+    "checks": 859,
+    "fail": 0,
+    "note": ""
+   },
+   {
+    "name": "ui_battle_r20_test",
+    "checks": 1659,
+    "fail": 0,
+    "note": ""
+   },
+   {
+    "name": "motion_r9_integration",
+    "checks": 944,
+    "fail": 0,
+    "note": ""
+   },
+   {
+    "name": "motion_r18_integration",
+    "checks": 3540,
+    "fail": 0,
+    "note": ""
+   },
+   {
+    "name": "ui_data_r21_test",
+    "checks": 9608,
+    "fail": 0,
+    "note": "이름표 넘침 0"
+   },
+   {
+    "name": "ui_town_r21_test",
+    "checks": 1553,
+    "fail": 0,
+    "note": ""
+   },
+   {
+    "name": "ui_town_r21_round2_test",
+    "checks": 4379,
+    "fail": 0,
+    "note": ""
+   },
+   {
+    "name": "ui_town_r21_round3_test",
+    "checks": 8185,
+    "fail": 0,
+    "note": "초상 칸 300"
+   },
+   {
+    "name": "ui_town_result_r21_test",
+    "checks": 190,
+    "fail": 0,
+    "note": ""
+   },
+   {
+    "name": "ui_town_r21_round4_test",
+    "checks": 10028,
+    "fail": 0,
+    "note": ""
+   }
+  ]
+ },
+ "reviews": [
+  {
+   "title": "A 3차 · Opus(opus-reviewer)",
+   "detail": "통합 불가 · P1 3 · P2 5, 전부 원본 Lua 하네스와 Godot 에서 재현",
+   "tone": "red",
+   "state": "수정 중"
+  },
+  {
+   "title": "A 3차 · 외부 3R(openai/gpt-5.6-luna)",
+   "detail": "P0 없음 · P1 2(이전부터 있던 차이, 남은 문제로 기록) · P2 1",
+   "tone": "warn",
+   "state": "상한 도달"
+  },
+  {
+   "title": "A 2차 · 외부 2R",
+   "detail": "1R 8건 모두 고쳐짐 확인, 새 P2 4건 → 3차에서 수정",
+   "tone": "ok",
+   "state": "반영"
+  },
+  {
+   "title": "마을 4차 · 직접 비교",
+   "detail": "시안|게임 28쌍을 Claude 가 열어 봄. 휴게실 자세·콜라주·장비 그림 등은 아직 다름, 패배 문구 잘림 발견",
+   "tone": "warn",
+   "state": "남은 차이"
+  }
+ ],
+ "lanes": [
+  {
+   "id": "a-data",
+   "name": "A 5차 · 남은 원본 전투 차이 6건",
+   "model": "gpt-6.1-sol",
+   "hero": "hildegard",
+   "detail": "보호막 회복 경로, 동료 사망 시 버프 제거·훅, 구원 순서, 성벽 회복 반올림, 사제 자기 구원, 사망 뒤 같은 틱 처리",
+   "state": "running",
+   "started": "2026-10-31T16:19+09:00",
+   "touched": "2026-11-02T20:33+09:00",
+   "idle_sec": 8,
+   "steps": 46,
+   "last": ""
+  },
+  {
+   "id": "p1",
+   "name": "P1 · 페르소나·첫 시작·저장 토대",
+   "model": "gpt-6.1-sol",
+   "hero": "marceline",
+   "detail": "유저 캐릭터 만들기(종족·출신·10직업·포인트·시나리오·첫 동료), 자기 참전/지휘, 옛 저장 무손실 이관",
+   "state": "running",
+   "started": "2026-11-02T20:19+09:00",
+   "touched": "2026-11-02T20:33+09:00",
+   "idle_sec": 16,
+   "steps": 49,
+   "last": ""
+  },
+  {
+   "id": "dialogue",
+   "name": "L 2차 · 대사 다듬기 + 9명 추가",
+   "model": "gpt-6.1-sol",
+   "hero": "teiris",
+   "detail": "판정 반영(반응 1~3줄·인물 버릇·허수아비 선택지 제거) + 나란·할드리크·에르데네·비앙카·사야·게르다·유디트·레비아·우르다",
+   "state": "running",
+   "started": "2026-11-02T19:30+09:00",
+   "touched": "2026-11-02T20:33+09:00",
+   "idle_sec": 0,
+   "steps": 17,
+   "last": ""
+  },
+  {
+   "id": "d-town",
+   "name": "D 6차 · 카드 사건·영입·호감·대사 재생기",
+   "model": "gpt-6.1-terra",
+   "hero": "bargut",
+   "detail": "원본 카드 사건, 영입 주선 난수, 여관·전투 호감 훅 + 선택지 대사를 여관·던전에 연결",
+   "state": "running",
+   "started": "2026-10-31T16:19+09:00",
+   "touched": "2026-11-02T20:33+09:00",
+   "idle_sec": 0,
+   "steps": 53,
+   "last": ""
+  },
+  {
+   "id": "status",
+   "name": "현황판 개편",
+   "model": "gpt-6.1-terra",
+   "hero": "berenga",
+   "detail": "도트 애니메이션·세계관 외형·실시간 갱신·버그 신고",
+   "state": "waiting"
+  }
+ ],
+ "commits": [
+  {
+   "hash": "f36f68c",
+   "at": "2026-11-02T20:27:19+09:00",
+   "subject": "r21-Q1(luna): 미확인 행 확인 — 10행 '없음' 확정, 774행 근거 부족으로 유지",
+   "branch": "r21-parity"
+  },
+  {
+   "hash": "3f92b3d",
+   "at": "2026-11-02T20:26:51+09:00",
+   "subject": "Merge commit '7312898' into r21-d-town",
+   "branch": "r21-d-town"
+  },
+  {
+   "hash": "6b7a75c",
+   "at": "2026-11-02T20:26:51+09:00",
+   "subject": "Merge commit '1e5d4cb' into r21-d-town",
+   "branch": "r21-d-town"
+  },
+  {
+   "hash": "b3e9d2d",
+   "at": "2026-11-02T20:26:16+09:00",
+   "subject": "웹 빌드 r21-d-town-20261102(마을 5차 + 전투 4차)",
+   "branch": "r21-d-town"
+  },
+  {
+   "hash": "7312898",
+   "at": "2026-11-02T20:18:36+09:00",
+   "subject": "r21-P: 원본 봇 기능 전수 대조표(3,860행) + 10개 묶음 계획",
+   "branch": "r21-d-town"
+  },
+  {
+   "hash": "675eccd",
+   "at": "2026-11-02T20:16:01+09:00",
+   "subject": "Merge branch 'r21-a-data' into r21-d-town",
+   "branch": "r21-d-town"
+  },
+  {
+   "hash": "15ecfbc",
+   "at": "2026-11-02T20:16:01+09:00",
+   "subject": "r21-D 5차: 결과 문구 복구·원본 연구 편집 규칙(Lua 13,843/13,843)",
+   "branch": "r21-d-town"
+  },
+  {
+   "hash": "1e5d4cb",
+   "at": "2026-11-02T20:15:54+09:00",
+   "subject": "r21-L 1차: 동료 대사 시범 3명(여관 84장면·선택지 252·던전 252·단계 변화 42) + 검사 도구",
+   "branch": "r21-d-town"
+  },
+  {
+   "hash": "72bf1b2",
+   "at": "2026-11-02T20:15:25+09:00",
+   "subject": "r21-A 4차: Opus 지적 8건(psguard 분리·오라클 정정·콜레트 봉인 회피·성벽 턴·DOT 사망 소생 시점·사야 난수·구원 보호막·자하르 zdn)",
+   "branch": "r21-d-town"
+  },
+  {
+   "hash": "acb1a4a",
+   "at": "2026-11-01T14:17:35+09:00",
+   "subject": "Merge branch 'r21-a-data' into r21-d-town",
+   "branch": "r21-dialogue"
+  },
+  {
+   "hash": "5e46681",
+   "at": "2026-11-01T14:17:35+09:00",
+   "subject": "r21-D 4차: 시안 외형(붓글씨 제목 SVG 18·수묵 배경 19·탐색 노드 지도·연구/봉인 보관함 외형)",
+   "branch": "r21-dialogue"
+  },
+  {
+   "hash": "735a083",
+   "at": "2026-11-01T14:17:21+09:00",
+   "subject": "r21-A 3차: 재검수 4건 수정(DOT 일반 피해 경로·DOT 회피·예고 대상 저장·빈 표본 단언)",
+   "branch": "r21-a-data"
+  }
+ ],
+ "game": {
+  "build": "torva-art-20261027-r4b",
+  "ui_build": "r21-d-town-20261102b",
+  "engine": "Godot 4.7.2",
+  "pck_sha256": "b67ccc519f695f4b0c6b09805199cd09f29ceba6ba835d1d917deb3aebfe091f",
+  "wasm_sha256": "fc74679e3b97f76878947fcd4fbe1268cbfa6188182a2e33bbc3f5dc9bfa57d0"
+ },
+ "generated": "2026-11-02T20:33:25+09:00"
+}
