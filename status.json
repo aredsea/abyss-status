@@ -525,9 +525,9 @@
    "review_findings": 6,
    "state": "running",
    "started": "2026-10-31T16:19+09:00",
-   "touched": "2026-11-02T21:53+09:00",
-   "idle_sec": 0,
-   "steps": 96,
+   "touched": "2026-11-02T21:56+09:00",
+   "idle_sec": 22,
+   "steps": 100,
    "last": ""
   },
   {
@@ -538,9 +538,9 @@
    "detail": "원본 67-settings(난이도·연출·안전한 초기화), 한국어/영어 전환(영문 정본만), 이름 뒤 조사 자동, 힐데가 등 원본 표기",
    "state": "running",
    "started": "2026-11-02T20:19+09:00",
-   "touched": "2026-11-02T21:53+09:00",
-   "idle_sec": 27,
-   "steps": 37,
+   "touched": "2026-11-02T21:56+09:00",
+   "idle_sec": 1,
+   "steps": 45,
    "last": ""
   },
   {
@@ -552,7 +552,7 @@
    "state": "running",
    "started": "2026-11-02T19:30+09:00",
    "touched": "2026-11-02T21:52+09:00",
-   "idle_sec": 40,
+   "idle_sec": 222,
    "steps": 16,
    "last": ""
   },
@@ -564,9 +564,9 @@
    "detail": "P1 페르소나와 7차 성장 기록을 하나로, 새 시작→만들기→첫 만남→대화→영입→출전→정산 한 흐름 시험, 시안 원정 준비 화면에 자기 참전/지휘",
    "state": "running",
    "started": "2026-10-31T16:19+09:00",
-   "touched": "2026-11-02T21:53+09:00",
+   "touched": "2026-11-02T21:56+09:00",
    "idle_sec": 0,
-   "steps": 84,
+   "steps": 89,
    "last": ""
   },
   {
@@ -577,9 +577,9 @@
    "detail": "비밀 키 없이: 서버가 계정 코드·쓰기 PIN 발급, 저장 내용을 서버가 직접 검사, 다른 기기 충돌 해결, 최근 10개 되돌리기, 자동 동기화, 순위는 서버가 계산. 별도 Cloudflare Worker",
    "state": "running",
    "started": "2026-11-02T21:25+09:00",
-   "touched": "2026-11-02T21:52+09:00",
-   "idle_sec": 45,
-   "steps": 107,
+   "touched": "2026-11-02T21:56+09:00",
+   "idle_sec": 6,
+   "steps": 114,
    "last": ""
   }
  ],
@@ -662,8 +662,8 @@
   "build": "torva-art-20261027-r4b",
   "ui_build": "r21-d-town-20261102d",
   "engine": "Godot 4.7.2",
-  "pck_sha256": "b31fda34d296fddff3e54bf4240044ba4e180fdd106d51eb3f2bfe2df665c506",
+  "pck_sha256": "65be77a8a9bed274380e61c4063923f7f76a9518b7bbf9229a17b0b45f516f65",
   "wasm_sha256": "fc74679e3b97f76878947fcd4fbe1268cbfa6188182a2e33bbc3f5dc9bfa57d0"
  },
- "generated": "2026-11-02T21:53:31+09:00"
+ "generated": "2026-11-02T21:56:34+09:00"
 }
