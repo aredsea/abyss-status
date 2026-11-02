@@ -549,9 +549,9 @@
    "review_findings": 6,
    "state": "running",
    "started": "2026-10-31T16:19+09:00",
-   "touched": "2026-11-02T22:01+09:00",
-   "idle_sec": 18,
-   "steps": 105,
+   "touched": "2026-11-02T22:02+09:00",
+   "idle_sec": 13,
+   "steps": 107,
    "last": ""
   },
   {
@@ -563,7 +563,7 @@
    "state": "running",
    "started": "2026-11-02T20:19+09:00",
    "touched": "2026-11-02T22:02+09:00",
-   "idle_sec": 7,
+   "idle_sec": 32,
    "steps": 52,
    "last": ""
   },
@@ -576,7 +576,7 @@
    "state": "running",
    "started": "2026-11-02T19:30+09:00",
    "touched": "2026-11-02T22:01+09:00",
-   "idle_sec": 72,
+   "idle_sec": 96,
    "steps": 17,
    "last": ""
   },
@@ -589,7 +589,7 @@
    "state": "done",
    "started": "2026-10-31T16:19+09:00",
    "touched": "2026-11-02T22:00+09:00",
-   "idle_sec": 93,
+   "idle_sec": 117,
    "steps": 97,
    "last": ""
   },
@@ -602,8 +602,8 @@
    "state": "running",
    "started": "2026-11-02T21:25+09:00",
    "touched": "2026-11-02T22:02+09:00",
-   "idle_sec": 2,
-   "steps": 25,
+   "idle_sec": 8,
+   "steps": 27,
    "last": ""
   }
  ],
@@ -689,5 +689,5 @@
   "pck_sha256": "65be77a8a9bed274380e61c4063923f7f76a9518b7bbf9229a17b0b45f516f65",
   "wasm_sha256": "fc74679e3b97f76878947fcd4fbe1268cbfa6188182a2e33bbc3f5dc9bfa57d0"
  },
- "generated": "2026-11-02T22:02:14+09:00"
+ "generated": "2026-11-02T22:02:38+09:00"
 }
