@@ -649,9 +649,9 @@
    "review_findings": 4,
    "state": "running",
    "started": "2026-10-31T16:19+09:00",
-   "touched": "2026-11-02T23:21+09:00",
-   "idle_sec": 3,
-   "steps": 52,
+   "touched": "2026-11-02T23:24+09:00",
+   "idle_sec": 6,
+   "steps": 62,
    "last": ""
   },
   {
@@ -662,9 +662,9 @@
    "detail": "P1·P2·P4·P5·P7·P8·P9·P10·마을 2~9차 구현 뒤 원본 3,860행을 다시 같음/일부/없음으로 — 1차 목표 진척을 함수 기준 수치로",
    "state": "running",
    "started": "2026-11-02T23:02+09:00",
-   "touched": "2026-11-02T23:21+09:00",
-   "idle_sec": 17,
-   "steps": 44,
+   "touched": "2026-11-02T23:24+09:00",
+   "idle_sec": 27,
+   "steps": 53,
    "last": ""
   },
   {
@@ -675,9 +675,9 @@
    "detail": "셀바·오르넬·자하르·요룬드·라비니아·토베·미코·아델린·콜레트. 앞 12명 독립 검수에서 나온 반복 패턴 10가지를 처음부터 피해서 작성",
    "state": "running",
    "started": "2026-11-02T19:30+09:00",
-   "touched": "2026-11-02T23:20+09:00",
-   "idle_sec": 63,
-   "steps": 19,
+   "touched": "2026-11-02T23:24+09:00",
+   "idle_sec": 7,
+   "steps": 20,
    "last": ""
   },
   {
@@ -689,7 +689,7 @@
    "state": "done",
    "started": "2026-10-31T16:19+09:00",
    "touched": "2026-11-02T23:20+09:00",
-   "idle_sec": 102,
+   "idle_sec": 285,
    "steps": 77,
    "last": ""
   },
@@ -703,7 +703,7 @@
    "state": "done",
    "started": "2026-11-02T21:25+09:00",
    "touched": "2026-11-02T23:15+09:00",
-   "idle_sec": 386,
+   "idle_sec": 568,
    "steps": 86,
    "last": ""
   },
@@ -717,7 +717,7 @@
    "state": "running",
    "started": "2026-11-02T22:13+09:00",
    "touched": "2026-11-02T22:41+09:00",
-   "idle_sec": 2444,
+   "idle_sec": 2627,
    "steps": 72,
    "last": ""
   }
@@ -804,5 +804,5 @@
   "pck_sha256": "673fbd668eaf9ab2573f73c132bc739d926b3de0c5b912fa4c04fd6354521ca0",
   "wasm_sha256": "fc74679e3b97f76878947fcd4fbe1268cbfa6188182a2e33bbc3f5dc9bfa57d0"
  },
- "generated": "2026-11-02T23:21:48+09:00"
+ "generated": "2026-11-02T23:24:51+09:00"
 }
