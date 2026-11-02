@@ -1,0 +1,194 @@
+<!doctype html><html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><meta name="robots" content="noindex">
+<style>:root{padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}body{margin:0}[hidden]{display:none!important}</style>
+<title>심연 작업 현황판</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Black+Han+Sans&family=Gowun+Dodum&family=IBM+Plex+Mono:wght@400;600&display=swap">
+<style>
+/* 레이아웃: 게임 마을 화면처럼 종이 바탕 + 큰 먹 제목, 탭 4개, 카드 대신 줄(row) 목록 */
+:root{
+  --paper:#efe8da; --ink:#17140f; --muted:#6b6255; --line:#d6cbb7; --red:#d8452b; --red-soft:#f4d6cc;
+  --ok:#2f7a4b; --warn:#b27309; --run:#2b62a8; --card:#f7f2e8;
+  --f-display:"Black Han Sans","Malgun Gothic",sans-serif;
+  --f-body:"Gowun Dodum","Malgun Gothic","Apple SD Gothic Neo",sans-serif;
+  --f-mono:"IBM Plex Mono",ui-monospace,Consolas,monospace;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){--paper:#1a1713;--ink:#efe8da;--muted:#a69a87;--line:#3a332a;--red:#ef6a4f;--red-soft:#3d221b;--ok:#6cc08b;--warn:#e0a640;--run:#79a7e6;--card:#221e18;color-scheme:dark}}
+:root[data-theme="dark"]{--paper:#1a1713;--ink:#efe8da;--muted:#a69a87;--line:#3a332a;--red:#ef6a4f;--red-soft:#3d221b;--ok:#6cc08b;--warn:#e0a640;--run:#79a7e6;--card:#221e18;color-scheme:dark}
+body{background:var(--paper);color:var(--ink);font-family:var(--f-body);font-size:15px;line-height:1.6}
+.wrap{max-width:860px;margin:0 auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));padding-block:20px 48px}
+header h1{font-family:var(--f-display);font-weight:400;font-size:clamp(34px,9vw,58px);line-height:1;margin:0;text-wrap:balance}
+header h1 em{font-style:normal;color:var(--red)}
+.meta{display:flex;flex-wrap:wrap;gap:6px 14px;color:var(--muted);font-size:13px;margin-top:10px}
+.meta b{color:var(--ink);font-weight:600}
+nav{position:sticky;top:env(safe-area-inset-top,0px);background:var(--paper);z-index:5;display:grid;grid-template-columns:repeat(4,1fr);gap:4px;margin:18px 0 8px;padding-block:8px;border-bottom:2px solid var(--ink)}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:10;background:var(--paper)}
+nav button{font:inherit;font-family:var(--f-display);font-size:17px;background:transparent;color:var(--ink);border:0;padding:8px 4px;cursor:pointer;border-radius:4px}
+nav button[aria-selected="true"]{background:var(--red);color:#fff}
+nav button:focus-visible{outline:2px solid var(--run);outline-offset:2px}
+nav .n{font-family:var(--f-mono);font-size:12px;opacity:.8;margin-left:3px}
+section h2{font-family:var(--f-display);font-weight:400;font-size:22px;margin:22px 0 6px}
+section p.lead{color:var(--muted);margin:0 0 10px;max-width:65ch}
+.row{display:grid;grid-template-columns:auto 1fr;gap:4px 12px;padding:12px 0;border-bottom:1px solid var(--line)}
+.row > div{min-width:0}
+.row .t{font-weight:600}
+.row .d{color:var(--muted);font-size:14px}
+.pill{font-family:var(--f-mono);font-size:11px;font-weight:600;padding:2px 7px;border-radius:999px;white-space:nowrap;align-self:start;margin-top:3px;border:1px solid currentColor}
+.p-run{color:var(--run)} .p-wait{color:var(--muted)} .p-ok{color:var(--ok)} .p-warn{color:var(--warn)} .p-red{color:var(--red)}
+.bar{height:8px;background:var(--line);border-radius:4px;overflow:hidden;margin-top:6px}
+.bar i{display:block;height:100%;background:var(--red)}
+.tbl{overflow-x:auto}
+table{border-collapse:collapse;width:100%;font-size:14px;min-width:440px}
+th,td{text-align:left;padding:7px 8px;border-bottom:1px solid var(--line);vertical-align:top}
+th{font-size:12px;color:var(--muted);font-weight:600;letter-spacing:.03em}
+td.num{font-family:var(--f-mono);font-variant-numeric:tabular-nums;text-align:right;white-space:nowrap}
+code{font-family:var(--f-mono);font-size:13px;background:var(--card);padding:1px 5px;border-radius:3px}
+.note{background:var(--red-soft);padding:10px 12px;border-radius:6px;margin:12px 0;font-size:14px}
+.log{font-size:14px}
+.log .row{grid-template-columns:5.5em 1fr}
+.log time{font-family:var(--f-mono);font-size:12px;color:var(--muted);padding-top:2px}
+@media (prefers-reduced-motion:no-preference){nav button{transition:background-color .15s ease-out}}
+</style>
+</head><body>
+
+<div class="wrap">
+<header>
+  <h1>심연으로 <em>작업 현황</em></h1>
+  <div class="meta"><span>갱신 <b id="upd"></b></span><span>작업 담당 <b>로컬 GPT(gpt-6.1-sol)</b></span><span>지휘·검증 <b>Claude</b></span></div>
+</header>
+
+<nav role="tablist" aria-label="현황 구역">
+  <button role="tab" id="tab-plan" data-k="plan">기획</button>
+  <button role="tab" id="tab-progress" data-k="progress">진행<span class="n" id="n-progress"></span></button>
+  <button role="tab" id="tab-done" data-k="done">완료<span class="n" id="n-done"></span></button>
+  <button role="tab" id="tab-test" data-k="test">테스트</button>
+</nav>
+
+<section id="plan" role="tabpanel">
+  <h2>목표</h2>
+  <p class="lead"><b>1차 목표: 원본 캐릭터 봇(던전 봇)에 있는 기능을 모두 그대로 구현한다.</b> 원본 Lua 45개 파일(18,794줄)을 기능 단위로 쪼갠 대조표를 만들고, 빈칸을 묶음별로 채운다. 성적 장면(79-sex)·AI 대사·RisuAI 전용 기능만 제외.</p>
+  <div id="goals"></div>
+  <h2>지켜야 할 것</h2>
+  <div id="rules"></div>
+  <h2>다음 순서</h2>
+  <div id="next"></div>
+</section>
+
+<section id="progress" role="tabpanel" hidden>
+  <h2>지금 돌고 있는 작업</h2>
+  <div id="running"></div>
+  <h2>사장님 결정 대기</h2>
+  <div id="waiting"></div>
+  <h2>최근 기록</h2>
+  <div id="log" class="log"></div>
+</section>
+
+<section id="done" role="tabpanel" hidden>
+  <h2>끝난 작업</h2>
+  <p class="lead">커밋까지 마친 것만 올린다. 커밋 번호는 작업 브랜치 기준이며 main 에는 아직 합치지 않았다.</p>
+  <div id="donelist"></div>
+</section>
+
+<section id="test" role="tabpanel" hidden>
+  <h2>최근 전체 검사</h2>
+  <p class="lead" id="testlead"></p>
+  <div class="tbl"><table><thead><tr><th>검사</th><th style="text-align:right">항목</th><th style="text-align:right">실패</th><th>비고</th></tr></thead><tbody id="tests"></tbody></table></div>
+  <h2>검수 기록</h2>
+  <div id="reviews"></div>
+</section>
+</div>
+
+<script>
+const S = {
+  updated: "2026-11-02 19:31",
+  goals: [
+    ["원본 봇 기능 전부(1차 목표)", "45개 Lua 파일 기능 대조표 작성 중 — 끝나면 실제 완성도로 이 막대를 바꿈", 0],
+    ["적 데이터·적 도트 100종", "원본 봇 적 정의·행동을 옮기고, 적마다 픽셀 도트를 따로 그림", 100],
+    ["동료 초상 30명", "원본 얼굴·의상 그대로, 화면 칸 10종에 맞게 구도만 조정, 흰 테두리 0", 100],
+    ["던전 데이터", "원본 77-explore 기준 층·탐색·휴식·보스 진행", 90],
+    ["마을 전체 UI = 시안", "28패널 시안 외형 + 원본 규칙(상점·여관·연구·영입·카드)", 70]
+  ],
+  rules: [
+    "원본 봇이 데이터 정본, 시안이 배치 정본. 원본에 없는 무기·자세·인물·재화·뽑기는 넣지 않음",
+    "초상·적 도트는 다시 그리지 않음. 원본 파일 96개 해시 불변",
+    "사용자 저장은 지우지 않고, 옛 저장은 이관",
+    "성적 장면(79-sex.lua)은 이식하지 않음. AI 즉석 대사 자리는 미리 쓴 선택지 대화(호감 ±)로 채움",
+    "모든 대사는 사장님 한국어 지침(KOREAN-WRITING.md)으로 검수 — 번역투·위화감 0, 인물별 화법 유지, 기질·성향 이름 노출 금지",
+    "웹 공개는 GitHub Pages(aredsea/into-the-abyss-web) 만. main 합치기는 사장님 허락 뒤"
+  ],
+  next: [
+    ["기능 대조표", "원본 45개 파일 전부 기능별로 같음/일부/없음/제외 판정 + 남은 작업 6~10묶음 제안"],
+    ["동료 대사 확대", "시범 3명 검수 통과 뒤 나머지 동료 전원. 인물마다 대사를 만든 뒤 별도 한국어 검수(지침 대조) → Claude 표본 판정 → 게임 여관·던전 화면에 연결"],
+    ["묶음별 구현", "대조표 빈칸을 묶음 순서대로 로컬 GPT 에 맡기고, 묶음마다 원본 하네스 대조 시험으로 확인"],
+    ["A 4차 확인", "Opus 검수 8건 수정본을 검수자 재현 스크립트로 Claude 가 직접 재확인 → 커밋 → 마을 브랜치에 합침"],
+    ["마을 D 5차", "남은 원본 규칙(페르소나 연구·카드 사건·영입 무작위·NPC 호감 훅) + 패배 화면 문구 잘림 수정"],
+    ["합친 판 전체 검사·웹 빌드", "검사 28종 + 웹 5개 화면 크기 실행 확인"],
+    ["main 합치기", "사장님 허락을 받은 뒤에만"]
+  ],
+  running: [
+    ["L · 동료 대사 시범 3명", "힐데가르트·마르셀린·테이리스: 여관 선택지 대화(호감 단계별, 선택에 따라 호감 ±) + 던전 상황별 짧은 말 + 단계 변화 장면. 사장님 한국어 지침으로 자체 교정 → Claude 가 직접 읽고 판정 → 30명으로 확대", "run", "실행 중"],
+    ["P · 원본 기능 전수 대조표", "원본 Lua 45개 파일을 기능 단위로 쪼개 게임 구현과 대조(문서 작업, 코드 수정 없음)", "run", "실행 중"],
+    ["A 4차 · 전투 원본 대조 수정", "Opus 검수 지적 8건(P1 3 · P2 5): 피해 감소 키 매핑, 거짓 통과 시험, 콜레트 봉인 회피, 성벽 턴, 같은 틱 소생, 사야 난수, 구원 보호막 보너스, 자하르 보정", "run", "실행 중"],
+    ["마을 D 5차 · 남은 규칙", "원본 연구·카드 사건·영입·호감 훅 이식 + 패배 문구 잘림", "run", "실행 중"]
+  ],
+  waiting: [
+    ["r18~r21 main 합치기", "작업 브랜치에만 있음. 공개 main 에 합칠지 사장님 답이 필요", "warn", "대기"]
+  ],
+  log: [
+    ["11-02 19:31", "동료 대사 작업 시작(시범 3명). 레인 4개 동시 진행"],
+    ["11-02 19:29","1차 목표 변경: 원본 봇 기능 전부 그대로. 기능 전수 대조표 작업 시작"],
+    ["11-02 19:27","마을 D 5차 시작(남은 원본 규칙 + 패배 문구 잘림). A 4차와 동시 진행"],
+    ["11-02 19:20", "현황판 개설. 앞으로 작업이 끝날 때마다, 그리고 1시간마다 갱신"],
+    ["11-01 22:20", "A 4차 시작(Opus 검수 8건)"],
+    ["11-01 22:15", "Opus 검수: 통합 불가, P1 3 · P2 5. P1 2건은 Claude 가 원본 줄로 확인"],
+    ["11-01 22:03", "외부 검수 3라운드(Luna): P0 없음, P1 2건은 이번 수정 이전부터 있던 차이"],
+    ["11-01 14:40", "마을 4차 + A 3차 합친 판 전체 검사 28종 실패 0"],
+    ["11-01 14:20", "마을 4차 완료: 붓글씨 제목 18 · 수묵 배경 19 · 탐색 노드 지도. 비교 이미지 3장 전송"]
+  ],
+  done: [
+    ["적 도트 100종", "r21-b-enemy-art · 501a976", "1120×1400, 공통 32색, 등급별 크기 순서, 전체 시트 확인"],
+    ["동료 초상 30명 · 칸 300개", "r21-c-portraits · 1c1ef9f", "흰 테두리 세 바탕 모두 0, 원본 해시 96/96"],
+    ["적 데이터·행동 이식 2차", "r21-a-data · 8a73a3e", "적 행동 1,221건 원본과 100% 일치"],
+    ["적 행동 3차(재검수 4건)", "r21-a-data · 735a083", "DOT 일반 피해 경로, DOT 회피, 예고 대상 저장, 빈 표본 단언"],
+    ["마을 2·3차(규칙·상점)", "r21-d-town · 7495349, afe6492", "상점 규칙 Lua 8,520/8,520 일치, 25/28 패널"],
+    ["마을 4차(시안 외형)", "r21-d-town · 5e46681", "붓글씨 제목 18, 수묵 배경 19(+1.9MB), 노드 지도, 27/28 패널 외형"]
+  ],
+  testlead: "11-01 14:40, 마을 4차 + A 3차를 합친 r21-d-town 에서 Godot 4.7.2 로 직접 실행. 28종 모두 종료 코드 0, 스크립트 오류 0.",
+  tests: [
+    ["import", "", 0, ""],["world_test",44,0,""],["state_test",54,0,""],["route_test",41,0,""],["expansion_test",3350,0,""],
+    ["motion_test","",0,"PASS"],["motion_asset_test","",0,"19 clips"],["art_test","",0,"30명"],["export_licenses","",0,""],
+    ["data_r21_test",7493,0,""],["dungeon_r21_test",3018,0,"1~420층"],["enemy_action_r21_test",2878,0,"1,221/1,221 일치"],
+    ["enemy_regression_r21_test",30,0,""],["enemy_review_r21_test",148,0,"Opus 가 이 시험의 거짓 통과를 지적 → A 4차에서 수정 중"],
+    ["town_r21_test",2675,0,"Lua 2,544"],["town_commerce_r21_test",14714,0,"Lua 8,520/8,520"],
+    ["ui_battle_r17_test",6085,0,""],["ui_battle_r18_test",4592,0,""],["ui_battle_r19_test",859,0,""],["ui_battle_r20_test",1659,0,""],
+    ["motion_r9_integration",944,0,""],["motion_r18_integration",3540,0,""],["ui_data_r21_test",9608,0,"이름표 넘침 0"],
+    ["ui_town_r21_test",1553,0,""],["ui_town_r21_round2_test",4379,0,""],["ui_town_r21_round3_test",8185,0,"초상 칸 300"],
+    ["ui_town_result_r21_test",190,0,""],["ui_town_r21_round4_test",10028,0,""]
+  ],
+  reviews: [
+    ["A 3차 · Opus(opus-reviewer)", "통합 불가 · P1 3 · P2 5, 전부 원본 Lua 하네스와 Godot 에서 재현", "red", "수정 중"],
+    ["A 3차 · 외부 3R(openai/gpt-5.6-luna)", "P0 없음 · P1 2(이전부터 있던 차이, 남은 문제로 기록) · P2 1", "warn", "상한 도달"],
+    ["A 2차 · 외부 2R", "1R 8건 모두 고쳐짐 확인, 새 P2 4건 → 3차에서 수정", "ok", "반영"],
+    ["마을 4차 · 직접 비교", "시안|게임 28쌍을 Claude 가 열어 봄. 휴게실 자세·콜라주·장비 그림 등은 아직 다름, 패배 문구 잘림 발견", "warn", "남은 차이"]
+  ]
+};
+const $=id=>document.getElementById(id);
+const esc=s=>String(s).replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+const pill=(k,t)=>`<span class="pill p-${k}">${esc(t)}</span>`;
+$("upd").textContent=S.updated;
+$("goals").innerHTML=S.goals.map(([t,d,p])=>`<div class="row">${pill(p>=100?"ok":"run",p+"%")}<div><div class="t">${esc(t)}</div><div class="d">${esc(d)}</div><div class="bar"><i style="width:${p}%"></i></div></div></div>`).join("");
+$("rules").innerHTML=S.rules.map(r=>`<div class="row">${pill("red","규칙")}<div class="d" style="color:var(--ink)">${esc(r)}</div></div>`).join("");
+$("next").innerHTML=S.next.map(([t,d],i)=>`<div class="row">${pill("wait",(i+1)+"")}<div><div class="t">${esc(t)}</div><div class="d">${esc(d)}</div></div></div>`).join("");
+$("running").innerHTML=S.running.map(([t,d,k,s])=>`<div class="row">${pill(k,s)}<div><div class="t">${esc(t)}</div><div class="d">${esc(d)}</div></div></div>`).join("");
+$("waiting").innerHTML=S.waiting.map(([t,d,k,s])=>`<div class="row">${pill(k,s)}<div><div class="t">${esc(t)}</div><div class="d">${esc(d)}</div></div></div>`).join("");
+$("log").innerHTML=S.log.map(([w,t])=>`<div class="row"><time>${esc(w)}</time><div>${esc(t)}</div></div>`).join("");
+$("donelist").innerHTML=S.done.map(([t,c,d])=>`<div class="row">${pill("ok","완료")}<div><div class="t">${esc(t)}</div><div class="d"><code>${esc(c)}</code> ${esc(d)}</div></div></div>`).join("");
+$("testlead").textContent=S.testlead;
+$("tests").innerHTML=S.tests.map(([n,c,f,x])=>`<tr><td><code>${esc(n)}</code></td><td class="num">${c===""?"–":Number(c).toLocaleString("ko-KR")}</td><td class="num" style="color:var(${f?"--red":"--ok"})">${f}</td><td>${esc(x)}</td></tr>`).join("");
+$("reviews").innerHTML=S.reviews.map(([t,d,k,s])=>`<div class="row">${pill(k,s)}<div><div class="t">${esc(t)}</div><div class="d">${esc(d)}</div></div></div>`).join("");
+$("n-progress").textContent=S.running.length; $("n-done").textContent=S.done.length;
+const keys=["plan","progress","done","test"];
+function show(k){keys.forEach(x=>{$(x).hidden=x!==k;$("tab-"+x).setAttribute("aria-selected",x===k)});try{localStorage.setItem("tab",k)}catch(e){}}
+document.querySelectorAll("nav button").forEach(b=>b.addEventListener("click",()=>show(b.dataset.k)));
+let start=(location.hash||"").slice(1); if(!keys.includes(start)){try{start=localStorage.getItem("tab")}catch(e){} } show(keys.includes(start)?start:"progress");
+</script>
+</body></html>
