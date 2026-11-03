@@ -914,9 +914,9 @@
    "task": "전투 대조표 남은 82행",
    "state": "running",
    "started": "2026-11-03T05:17+09:00",
-   "touched": "2026-11-03T20:34+09:00",
-   "idle_sec": 7,
-   "steps": 52,
+   "touched": "2026-11-03T20:35+09:00",
+   "idle_sec": 23,
+   "steps": 56,
    "last": ""
   },
   {
@@ -924,11 +924,11 @@
    "title": "원정 3차",
    "model": "gpt-6.1-sol",
    "task": "원정 대조표 남은 75행",
-   "state": "running",
+   "state": "done",
    "started": "2026-11-03T05:17+09:00",
-   "touched": "2026-11-03T20:34+09:00",
-   "idle_sec": 0,
-   "steps": 124,
+   "touched": "2026-11-03T20:35+09:00",
+   "idle_sec": 21,
+   "steps": 126,
    "last": ""
   }
  ],
@@ -1014,5 +1014,5 @@
   "pck_sha256": "572d1192593c9dacdb6a8b195ea2bd699d91847df810099b3b30b5dde92987b0",
   "wasm_sha256": "fc74679e3b97f76878947fcd4fbe1268cbfa6188182a2e33bbc3f5dc9bfa57d0"
  },
- "generated": "2026-11-03T20:34:22+09:00"
+ "generated": "2026-11-03T20:35:39+09:00"
 }
