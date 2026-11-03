@@ -906,10 +906,16 @@
  "game_note": "공개판 r21-d-town-20261103c — 원본과 같은 전투 엔진(30명 기술·장비 효과·페르소나 직접 참전), 동료 30명 대사, 던전 원정, 시설",
  "commits": [
   {
+   "hash": "a150c7b",
+   "at": "2026-11-03T19:31:37+09:00",
+   "subject": "Merge r23-battle 4차 into r21-d-town",
+   "branch": "r21-d-town"
+  },
+  {
    "hash": "229997d",
    "at": "2026-11-03T09:15:48+09:00",
    "subject": "r23-battle 4차: 전투 누적 212행 중 95행 원본 일치",
-   "branch": "r21-a-data"
+   "branch": "r21-d-town"
   },
   {
    "hash": "d80ec90",
@@ -948,16 +954,10 @@
    "branch": "r21-d-town"
   },
   {
-   "hash": "32e5555",
-   "at": "2026-11-03T07:27:51+09:00",
-   "subject": "r23-expe 2차: 원정 누적 109행 중 34행 원본 일치",
-   "branch": "r21-d-town"
-  },
-  {
    "hash": "d711df9",
    "at": "2026-11-03T07:19:25+09:00",
    "subject": "r23-gear 2차: 누적 77행 중 37행 원본 일치·25행 수정, 상점 새 필드 서버 허용(전체 검사·서버 시험 실패 0)",
-   "branch": "r21-d-town"
+   "branch": "r21-p1"
   },
   {
    "hash": "d03bb08",
@@ -982,8 +982,8 @@
   "build": "torva-art-20261027-r4b",
   "ui_build": "r21-d-town-20261103c",
   "engine": "Godot 4.7.2",
-  "pck_sha256": "cc702e82c48be0b0f3f27299be03ac197e2356c9c32768c5397009c546213a66",
+  "pck_sha256": "572d1192593c9dacdb6a8b195ea2bd699d91847df810099b3b30b5dde92987b0",
   "wasm_sha256": "fc74679e3b97f76878947fcd4fbe1268cbfa6188182a2e33bbc3f5dc9bfa57d0"
  },
- "generated": "2026-11-03T09:53:38+09:00"
+ "generated": "2026-11-03T19:31:42+09:00"
 }
