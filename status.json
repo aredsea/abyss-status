@@ -987,8 +987,8 @@
    "state": "running",
    "started": "2026-11-04T07:16+09:00",
    "touched": "2026-11-04T08:08+09:00",
-   "idle_sec": 0,
-   "steps": 54,
+   "idle_sec": 1,
+   "steps": 55,
    "last": ""
   },
   {
@@ -999,7 +999,7 @@
    "state": "running",
    "started": "2026-11-04T07:17+09:00",
    "touched": "2026-11-04T08:08+09:00",
-   "idle_sec": 0,
+   "idle_sec": 1,
    "steps": 53,
    "last": ""
   }
@@ -1086,5 +1086,5 @@
   "pck_sha256": "a96cde07357542ffcfd73b44fb04c73212647ec1a15467fc548225409f67c708",
   "wasm_sha256": "fc74679e3b97f76878947fcd4fbe1268cbfa6188182a2e33bbc3f5dc9bfa57d0"
  },
- "generated": "2026-11-04T08:08:07+09:00"
+ "generated": "2026-11-04T08:08:09+09:00"
 }
