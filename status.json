@@ -918,9 +918,9 @@
    "task": "전투 대조표 남은 82행",
    "state": "running",
    "started": "2026-11-03T05:17+09:00",
-   "touched": "2026-11-03T20:37+09:00",
-   "idle_sec": 14,
-   "steps": 60,
+   "touched": "2026-11-03T20:38+09:00",
+   "idle_sec": 17,
+   "steps": 63,
    "last": ""
   },
   {
@@ -931,8 +931,8 @@
    "state": "running",
    "started": "2026-11-03T05:17+09:00",
    "touched": "2026-11-03T20:37+09:00",
-   "idle_sec": 16,
-   "steps": 15,
+   "idle_sec": 60,
+   "steps": 17,
    "last": ""
   }
  ],
@@ -1018,5 +1018,5 @@
   "pck_sha256": "572d1192593c9dacdb6a8b195ea2bd699d91847df810099b3b30b5dde92987b0",
   "wasm_sha256": "fc74679e3b97f76878947fcd4fbe1268cbfa6188182a2e33bbc3f5dc9bfa57d0"
  },
- "generated": "2026-11-03T20:37:25+09:00"
+ "generated": "2026-11-03T20:38:42+09:00"
 }
