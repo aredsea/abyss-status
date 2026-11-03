@@ -910,9 +910,9 @@
    "task": "전투 대조표 남은 117행 — 분기 진입 계측으로 한꺼번에",
    "state": "running",
    "started": "2026-11-03T05:17+09:00",
-   "touched": "2026-11-03T19:42+09:00",
-   "idle_sec": 33,
-   "steps": 38,
+   "touched": "2026-11-03T19:43+09:00",
+   "idle_sec": 5,
+   "steps": 43,
    "last": ""
   },
   {
@@ -922,9 +922,9 @@
    "task": "장비 대조표 남은 40행",
    "state": "running",
    "started": "2026-11-03T05:17+09:00",
-   "touched": "2026-11-03T19:42+09:00",
-   "idle_sec": 6,
-   "steps": 32,
+   "touched": "2026-11-03T19:43+09:00",
+   "idle_sec": 11,
+   "steps": 37,
    "last": ""
   },
   {
@@ -934,9 +934,9 @@
    "task": "원정 대조표 남은 75행",
    "state": "running",
    "started": "2026-11-03T05:17+09:00",
-   "touched": "2026-11-03T19:42+09:00",
-   "idle_sec": 12,
-   "steps": 35,
+   "touched": "2026-11-03T19:43+09:00",
+   "idle_sec": 4,
+   "steps": 41,
    "last": ""
   }
  ],
@@ -1022,5 +1022,5 @@
   "pck_sha256": "572d1192593c9dacdb6a8b195ea2bd699d91847df810099b3b30b5dde92987b0",
   "wasm_sha256": "fc74679e3b97f76878947fcd4fbe1268cbfa6188182a2e33bbc3f5dc9bfa57d0"
  },
- "generated": "2026-11-03T19:42:34+09:00"
+ "generated": "2026-11-03T19:43:51+09:00"
 }
