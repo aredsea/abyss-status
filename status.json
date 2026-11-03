@@ -908,11 +908,11 @@
    "title": "전투 5차",
    "model": "gpt-6.1-sol",
    "task": "전투 대조표 남은 117행 — 분기 진입 계측으로 한꺼번에",
-   "state": "done",
+   "state": "running",
    "started": "2026-11-03T05:17+09:00",
-   "touched": "2026-11-03T20:21+09:00",
-   "idle_sec": 25,
-   "steps": 110,
+   "touched": "2026-11-03T20:23+09:00",
+   "idle_sec": 4,
+   "steps": 0,
    "last": ""
   },
   {
@@ -923,7 +923,7 @@
    "state": "done",
    "started": "2026-11-03T05:17+09:00",
    "touched": "2026-11-03T20:13+09:00",
-   "idle_sec": 495,
+   "idle_sec": 572,
    "steps": 91,
    "last": ""
   },
@@ -934,19 +934,37 @@
    "task": "원정 대조표 남은 75행",
    "state": "running",
    "started": "2026-11-03T05:17+09:00",
-   "touched": "2026-11-03T20:21+09:00",
-   "idle_sec": 15,
-   "steps": 107,
+   "touched": "2026-11-03T20:22+09:00",
+   "idle_sec": 45,
+   "steps": 109,
    "last": ""
   }
  ],
  "game_note": "공개판 r21-d-town-20261103c — 원본과 같은 전투 엔진(30명 기술·장비 효과·페르소나 직접 참전), 동료 30명 대사, 던전 원정, 시설",
  "commits": [
   {
+   "hash": "cdf6454",
+   "at": "2026-11-03T20:23:02+09:00",
+   "subject": "통합: 전투 공유 oracle 을 전투 갈래 판으로",
+   "branch": "r21-d-town"
+  },
+  {
+   "hash": "82e260e",
+   "at": "2026-11-03T20:22:47+09:00",
+   "subject": "Merge r23-battle 5차 into r21-d-town",
+   "branch": "r21-d-town"
+  },
+  {
+   "hash": "6a7e434",
+   "at": "2026-11-03T20:22:25+09:00",
+   "subject": "r23-battle 5차: 전투 누적 212행 중 130행 원본 일치(전체 검사 92그룹 실패 0, 6,320판 일치)",
+   "branch": "r21-d-town"
+  },
+  {
    "hash": "1ccd2d7",
    "at": "2026-11-03T20:14:36+09:00",
    "subject": "r23-gear 3차: 누적 77행 중 40행 원본 일치, 공유 oracle 충돌 분리(전체 검사 112그룹·서버 시험 실패 0)",
-   "branch": "r21-p1"
+   "branch": "r21-d-town"
   },
   {
    "hash": "a150c7b",
@@ -976,43 +994,25 @@
    "hash": "2e1328f",
    "at": "2026-11-03T08:29:18+09:00",
    "subject": "r23-battle 2·3차: 전투 묶음 계측으로 원본 일치 확대",
-   "branch": "r21-d-town"
+   "branch": "r21-p1"
   },
   {
    "hash": "513339d",
    "at": "2026-11-03T07:46:05+09:00",
    "subject": "Merge 32e5555 into r21-d-town",
-   "branch": "r21-d-town"
+   "branch": "r21-p1"
   },
   {
    "hash": "85ba1b2",
    "at": "2026-11-03T07:45:52+09:00",
    "subject": "Merge d711df9 into r21-d-town",
-   "branch": "r21-d-town"
-  },
-  {
-   "hash": "253aa59",
-   "at": "2026-11-03T07:45:34+09:00",
-   "subject": "r23-ui 2차: 화면·계정·설정 누적 144행 중 45행 원본 일치·30행 수정",
-   "branch": "r21-d-town"
-  },
-  {
-   "hash": "d03bb08",
-   "at": "2026-11-03T06:48:45+09:00",
-   "subject": "r23-battle 1차: 전투 212행 중 9행 원본 일치 확인·12행 수정(경계값·소환/단계·페르소나·carry·표시 시각·되치기)",
-   "branch": "r21-a-data"
+   "branch": "r21-p1"
   },
   {
    "hash": "8591eb0",
    "at": "2026-11-03T05:17:03+09:00",
    "subject": "r22b 재감사(통합 공개판 dd00992): 함수 기준 확인 완성도 37.05%",
    "branch": "r21-parity"
-  },
-  {
-   "hash": "670b5ac",
-   "at": "2026-11-03T04:53:38+09:00",
-   "subject": "r21-D 15차: 서버 P2 3건(silenced_id 형식·v3 전용 메타·장비 코드 정규형)",
-   "branch": "r21-a-data"
   }
  ],
  "game": {
@@ -1022,5 +1022,5 @@
   "pck_sha256": "572d1192593c9dacdb6a8b195ea2bd699d91847df810099b3b30b5dde92987b0",
   "wasm_sha256": "fc74679e3b97f76878947fcd4fbe1268cbfa6188182a2e33bbc3f5dc9bfa57d0"
  },
- "generated": "2026-11-03T20:22:12+09:00"
+ "generated": "2026-11-03T20:23:29+09:00"
 }
