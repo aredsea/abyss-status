@@ -918,9 +918,9 @@
    "task": "전투 대조표 남은 82행",
    "state": "running",
    "started": "2026-11-03T05:17+09:00",
-   "touched": "2026-11-03T20:51+09:00",
-   "idle_sec": 93,
-   "steps": 93,
+   "touched": "2026-11-03T20:53+09:00",
+   "idle_sec": 9,
+   "steps": 94,
    "last": ""
   },
   {
@@ -930,9 +930,9 @@
    "task": "원정 대조표 남은 66행",
    "state": "running",
    "started": "2026-11-03T05:17+09:00",
-   "touched": "2026-11-03T20:52+09:00",
-   "idle_sec": 11,
-   "steps": 53,
+   "touched": "2026-11-03T20:53+09:00",
+   "idle_sec": 37,
+   "steps": 55,
    "last": ""
   }
  ],
@@ -1015,8 +1015,8 @@
   "build": "torva-art-20261027-r4b",
   "ui_build": "r21-d-town-20261103c",
   "engine": "Godot 4.7.2",
-  "pck_sha256": "572d1192593c9dacdb6a8b195ea2bd699d91847df810099b3b30b5dde92987b0",
+  "pck_sha256": "0f096a757295f698c06b7fa71d3444735345d726826e73914e55c168305e138f",
   "wasm_sha256": "fc74679e3b97f76878947fcd4fbe1268cbfa6188182a2e33bbc3f5dc9bfa57d0"
  },
- "generated": "2026-11-03T20:52:38+09:00"
+ "generated": "2026-11-03T20:53:55+09:00"
 }
