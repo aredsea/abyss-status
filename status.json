@@ -927,7 +927,7 @@
    "state": "running",
    "started": "2026-11-03T05:17+09:00",
    "touched": "2026-11-03T21:17+09:00",
-   "idle_sec": 25,
+   "idle_sec": 36,
    "steps": 139,
    "last": ""
   },
@@ -939,7 +939,7 @@
    "state": "running",
    "started": "2026-11-03T05:17+09:00",
    "touched": "2026-11-03T21:17+09:00",
-   "idle_sec": 18,
+   "idle_sec": 29,
    "steps": 37,
    "last": ""
   },
@@ -951,8 +951,8 @@
    "state": "running",
    "started": "2026-11-03T05:17+09:00",
    "touched": "2026-11-03T21:18+09:00",
-   "idle_sec": 0,
-   "steps": 1,
+   "idle_sec": 2,
+   "steps": 4,
    "last": ""
   }
  ],
@@ -1038,5 +1038,5 @@
   "pck_sha256": "0f096a757295f698c06b7fa71d3444735345d726826e73914e55c168305e138f",
   "wasm_sha256": "fc74679e3b97f76878947fcd4fbe1268cbfa6188182a2e33bbc3f5dc9bfa57d0"
  },
- "generated": "2026-11-03T21:18:07+09:00"
+ "generated": "2026-11-03T21:18:18+09:00"
 }
