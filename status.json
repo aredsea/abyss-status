@@ -979,7 +979,7 @@
    "state": "done",
    "started": "2026-11-03T05:17+09:00",
    "touched": "2026-11-04T04:13+09:00",
-   "idle_sec": 4335,
+   "idle_sec": 4517,
    "steps": 62,
    "last": ""
   },
@@ -988,11 +988,11 @@
    "title": "마무리 1차",
    "model": "gpt-6.1-sol",
    "task": "원정 31·장비 14·화면 35 남은 행 + 연대기 영어 노출·{{user}} 노출 결함",
-   "state": "running",
+   "state": "done",
    "started": "2026-11-04T03:55+09:00",
-   "touched": "2026-11-04T05:25+09:00",
-   "idle_sec": 21,
-   "steps": 174,
+   "touched": "2026-11-04T05:28+09:00",
+   "idle_sec": 32,
+   "steps": 185,
    "last": ""
   }
  ],
@@ -1078,5 +1078,5 @@
   "pck_sha256": "a96cde07357542ffcfd73b44fb04c73212647ec1a15467fc548225409f67c708",
   "wasm_sha256": "fc74679e3b97f76878947fcd4fbe1268cbfa6188182a2e33bbc3f5dc9bfa57d0"
  },
- "generated": "2026-11-04T05:25:31+09:00"
+ "generated": "2026-11-04T05:28:33+09:00"
 }
