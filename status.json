@@ -915,8 +915,8 @@
    "state": "running",
    "started": "2026-11-03T05:17+09:00",
    "touched": "2026-11-03T20:25+09:00",
-   "idle_sec": 3,
-   "steps": 16,
+   "idle_sec": 34,
+   "steps": 19,
    "last": ""
   },
   {
@@ -927,7 +927,7 @@
    "state": "running",
    "started": "2026-11-03T05:17+09:00",
    "touched": "2026-11-03T20:24+09:00",
-   "idle_sec": 27,
+   "idle_sec": 105,
    "steps": 112,
    "last": ""
   }
@@ -1014,5 +1014,5 @@
   "pck_sha256": "572d1192593c9dacdb6a8b195ea2bd699d91847df810099b3b30b5dde92987b0",
   "wasm_sha256": "fc74679e3b97f76878947fcd4fbe1268cbfa6188182a2e33bbc3f5dc9bfa57d0"
  },
- "generated": "2026-11-03T20:25:14+09:00"
+ "generated": "2026-11-03T20:26:32+09:00"
 }
