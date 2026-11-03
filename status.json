@@ -911,8 +911,8 @@
    "state": "running",
    "started": "2026-11-03T05:17+09:00",
    "touched": "2026-11-03T20:10+09:00",
-   "idle_sec": 0,
-   "steps": 94,
+   "idle_sec": 26,
+   "steps": 96,
    "last": ""
   },
   {
@@ -922,9 +922,9 @@
    "task": "장비 대조표 남은 40행",
    "state": "running",
    "started": "2026-11-03T05:17+09:00",
-   "touched": "2026-11-03T20:09+09:00",
-   "idle_sec": 5,
-   "steps": 85,
+   "touched": "2026-11-03T20:10+09:00",
+   "idle_sec": 39,
+   "steps": 86,
    "last": ""
   },
   {
@@ -934,9 +934,9 @@
    "task": "원정 대조표 남은 75행",
    "state": "running",
    "started": "2026-11-03T05:17+09:00",
-   "touched": "2026-11-03T20:08+09:00",
-   "idle_sec": 62,
-   "steps": 84,
+   "touched": "2026-11-03T20:11+09:00",
+   "idle_sec": 4,
+   "steps": 88,
    "last": ""
   }
  ],
@@ -1022,5 +1022,5 @@
   "pck_sha256": "572d1192593c9dacdb6a8b195ea2bd699d91847df810099b3b30b5dde92987b0",
   "wasm_sha256": "fc74679e3b97f76878947fcd4fbe1268cbfa6188182a2e33bbc3f5dc9bfa57d0"
  },
- "generated": "2026-11-03T20:10:01+09:00"
+ "generated": "2026-11-03T20:11:19+09:00"
 }
