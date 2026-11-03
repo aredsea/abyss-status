@@ -908,11 +908,11 @@
    "title": "전투 5차",
    "model": "gpt-6.1-sol",
    "task": "전투 대조표 남은 117행 — 분기 진입 계측으로 한꺼번에",
-   "state": "running",
+   "state": "done",
    "started": "2026-11-03T05:17+09:00",
-   "touched": "2026-11-03T20:19+09:00",
-   "idle_sec": 55,
-   "steps": 105,
+   "touched": "2026-11-03T20:21+09:00",
+   "idle_sec": 25,
+   "steps": 110,
    "last": ""
   },
   {
@@ -923,7 +923,7 @@
    "state": "done",
    "started": "2026-11-03T05:17+09:00",
    "touched": "2026-11-03T20:13+09:00",
-   "idle_sec": 390,
+   "idle_sec": 495,
    "steps": 91,
    "last": ""
   },
@@ -934,9 +934,9 @@
    "task": "원정 대조표 남은 75행",
    "state": "running",
    "started": "2026-11-03T05:17+09:00",
-   "touched": "2026-11-03T20:19+09:00",
-   "idle_sec": 67,
-   "steps": 102,
+   "touched": "2026-11-03T20:21+09:00",
+   "idle_sec": 15,
+   "steps": 107,
    "last": ""
   }
  ],
@@ -1022,5 +1022,5 @@
   "pck_sha256": "572d1192593c9dacdb6a8b195ea2bd699d91847df810099b3b30b5dde92987b0",
   "wasm_sha256": "fc74679e3b97f76878947fcd4fbe1268cbfa6188182a2e33bbc3f5dc9bfa57d0"
  },
- "generated": "2026-11-03T20:20:27+09:00"
+ "generated": "2026-11-03T20:22:12+09:00"
 }
