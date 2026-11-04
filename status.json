@@ -1002,9 +1002,9 @@
    "task": "전투 저장 재개 유실 수정(서버 두 필드) + 남은 80행",
    "state": "running",
    "started": "2026-11-04T03:55+09:00",
-   "touched": "2026-11-04T09:51+09:00",
-   "idle_sec": 0,
-   "steps": 149,
+   "touched": "2026-11-04T09:53+09:00",
+   "idle_sec": 29,
+   "steps": 160,
    "last": ""
   },
   {
@@ -1012,11 +1012,11 @@
    "title": "영어 대사 4차",
    "model": "gpt-6.1-sol",
    "task": "luna 검수(평균 7.8, 지적 67) 반영 + 14,216줄 전체 직역투 다듬기",
-   "state": "running",
+   "state": "done",
    "started": "2026-11-04T07:17+09:00",
-   "touched": "2026-11-04T09:50+09:00",
-   "idle_sec": 10,
-   "steps": 106,
+   "touched": "2026-11-04T09:51+09:00",
+   "idle_sec": 170,
+   "steps": 108,
    "last": ""
   }
  ],
@@ -1102,5 +1102,5 @@
   "pck_sha256": "266671ceedeefe609a0ebe8733aeff16a8de01438337e8d3f408f90465cc849a",
   "wasm_sha256": "fc74679e3b97f76878947fcd4fbe1268cbfa6188182a2e33bbc3f5dc9bfa57d0"
  },
- "generated": "2026-11-04T09:51:03+09:00"
+ "generated": "2026-11-04T09:54:05+09:00"
 }
