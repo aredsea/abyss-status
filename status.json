@@ -1015,20 +1015,20 @@
    "id": "reskin",
    "state": "running",
    "started": "2026-11-04T19:27+09:00",
-   "touched": "2026-11-04T20:22+09:00",
-   "idle_sec": 3,
-   "steps": 126,
+   "touched": "2026-11-04T20:23+09:00",
+   "idle_sec": 55,
+   "steps": 128,
    "last": ""
   },
   {
    "title": "초상 누끼 재작업 (r24-portrait)",
    "detail": "원본에서 로컬 누끼 모델로 다시 따고 조각·흰 테두리 0, 칸 종류별 같은 기준으로 맞춤. 상자 없는 상반신(먹 번짐·아래 스며듦). 2번 해도 안 되면 투명 배경으로 새로 만들어 사장님 확인 후에만 반영",
    "id": "portrait",
-   "state": "running",
+   "state": "done",
    "started": "2026-11-04T19:27+09:00",
-   "touched": "2026-11-04T20:22+09:00",
-   "idle_sec": 4,
-   "steps": 142,
+   "touched": "2026-11-04T20:23+09:00",
+   "idle_sec": 76,
+   "steps": 144,
    "last": ""
   },
   {
@@ -1038,7 +1038,7 @@
    "state": "done",
    "started": "2026-11-04T18:53+09:00",
    "touched": "2026-11-04T20:09+09:00",
-   "idle_sec": 739,
+   "idle_sec": 883,
    "steps": 156,
    "last": ""
   }
@@ -1125,5 +1125,5 @@
   "pck_sha256": "266671ceedeefe609a0ebe8733aeff16a8de01438337e8d3f408f90465cc849a",
   "wasm_sha256": "fc74679e3b97f76878947fcd4fbe1268cbfa6188182a2e33bbc3f5dc9bfa57d0"
  },
- "generated": "2026-11-04T20:22:06+09:00"
+ "generated": "2026-11-04T20:24:29+09:00"
 }
