@@ -1015,9 +1015,9 @@
    "id": "reskin",
    "state": "running",
    "started": "2026-11-04T19:27+09:00",
-   "touched": "2026-11-04T19:50+09:00",
-   "idle_sec": 0,
-   "steps": 68,
+   "touched": "2026-11-04T19:51+09:00",
+   "idle_sec": 50,
+   "steps": 71,
    "last": ""
   },
   {
@@ -1026,9 +1026,9 @@
    "id": "portrait",
    "state": "running",
    "started": "2026-11-04T19:27+09:00",
-   "touched": "2026-11-04T19:50+09:00",
-   "idle_sec": 11,
-   "steps": 81,
+   "touched": "2026-11-04T19:51+09:00",
+   "idle_sec": 70,
+   "steps": 85,
    "last": ""
   },
   {
@@ -1038,7 +1038,7 @@
    "state": "running",
    "started": "2026-11-04T18:53+09:00",
    "touched": "2026-11-04T19:50+09:00",
-   "idle_sec": 26,
+   "idle_sec": 132,
    "steps": 128,
    "last": ""
   }
@@ -1125,5 +1125,5 @@
   "pck_sha256": "266671ceedeefe609a0ebe8733aeff16a8de01438337e8d3f408f90465cc849a",
   "wasm_sha256": "fc74679e3b97f76878947fcd4fbe1268cbfa6188182a2e33bbc3f5dc9bfa57d0"
  },
- "generated": "2026-11-04T19:50:43+09:00"
+ "generated": "2026-11-04T19:52:28+09:00"
 }
