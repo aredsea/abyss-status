@@ -1013,11 +1013,11 @@
    "title": "화면 전면 개조 (r24-reskin)",
    "detail": "마을=B 지도형, 동료=C 대화형(사장님 선택). 공용 부품 → 마을·동료 → 생성 → 동료·시설 → 가방 → 원정 → 기록·설정 → 전투 하단 카드 순서로 실제 게임 코드를 다시 만듦",
    "id": "reskin",
-   "state": "done",
+   "state": "running",
    "started": "2026-11-04T19:27+09:00",
-   "touched": "2026-11-04T20:55+09:00",
-   "idle_sec": 3044,
-   "steps": 168,
+   "touched": "2026-11-04T21:46+09:00",
+   "idle_sec": 3,
+   "steps": 1,
    "last": ""
   },
   {
@@ -1027,7 +1027,7 @@
    "state": "done",
    "started": "2026-11-04T19:27+09:00",
    "touched": "2026-11-04T20:23+09:00",
-   "idle_sec": 4967,
+   "idle_sec": 5003,
    "steps": 144,
    "last": ""
   },
@@ -1038,7 +1038,7 @@
    "state": "done",
    "started": "2026-11-04T18:53+09:00",
    "touched": "2026-11-04T20:09+09:00",
-   "idle_sec": 5774,
+   "idle_sec": 5810,
    "steps": 156,
    "last": ""
   }
@@ -1125,5 +1125,5 @@
   "pck_sha256": "266671ceedeefe609a0ebe8733aeff16a8de01438337e8d3f408f90465cc849a",
   "wasm_sha256": "fc74679e3b97f76878947fcd4fbe1268cbfa6188182a2e33bbc3f5dc9bfa57d0"
  },
- "generated": "2026-11-04T21:46:01+09:00"
+ "generated": "2026-11-04T21:46:37+09:00"
 }
