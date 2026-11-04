@@ -1016,7 +1016,7 @@
    "state": "running",
    "started": "2026-11-04T19:27+09:00",
    "touched": "2026-11-04T19:52+09:00",
-   "idle_sec": 36,
+   "idle_sec": 86,
    "steps": 71,
    "last": ""
   },
@@ -1026,9 +1026,9 @@
    "id": "portrait",
    "state": "running",
    "started": "2026-11-04T19:27+09:00",
-   "touched": "2026-11-04T19:52+09:00",
-   "idle_sec": 13,
-   "steps": 86,
+   "touched": "2026-11-04T19:53+09:00",
+   "idle_sec": 5,
+   "steps": 90,
    "last": ""
   },
   {
@@ -1037,9 +1037,9 @@
    "id": "finish",
    "state": "running",
    "started": "2026-11-04T18:53+09:00",
-   "touched": "2026-11-04T19:52+09:00",
-   "idle_sec": 20,
-   "steps": 130,
+   "touched": "2026-11-04T19:54+09:00",
+   "idle_sec": 0,
+   "steps": 133,
    "last": ""
   }
  ],
@@ -1125,5 +1125,5 @@
   "pck_sha256": "266671ceedeefe609a0ebe8733aeff16a8de01438337e8d3f408f90465cc849a",
   "wasm_sha256": "fc74679e3b97f76878947fcd4fbe1268cbfa6188182a2e33bbc3f5dc9bfa57d0"
  },
- "generated": "2026-11-04T19:53:11+09:00"
+ "generated": "2026-11-04T19:54:01+09:00"
 }
