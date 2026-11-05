@@ -1092,8 +1092,8 @@
   "build": "torva-art-20261027-r4b",
   "ui_build": "r21-d-town-20261103c",
   "engine": "Godot 4.7.2",
-  "pck_sha256": "e94ceed2101450dde4a457ae12db6e090e66dd2a06333674b3d7515dc75ebd4a",
+  "pck_sha256": "09694ce82e574fa7e4e0eba4652a15fa640ef63f9dc7b0e5a2ae1e0a16f40de4",
   "wasm_sha256": "fc74679e3b97f76878947fcd4fbe1268cbfa6188182a2e33bbc3f5dc9bfa57d0"
  },
- "generated": "2026-11-05T13:57:20+09:00"
+ "generated": "2026-11-05T14:36:08+09:00"
 }
