@@ -1027,20 +1027,20 @@
    "detail": "원본과 다른 63행 처리",
    "state": "running",
    "started": "2026-11-06T08:58+09:00",
-   "touched": "2026-11-06T09:11+09:00",
-   "idle_sec": 10,
-   "steps": 56,
+   "touched": "2026-11-06T09:14+09:00",
+   "idle_sec": 35,
+   "steps": 70,
    "last": ""
   },
   {
    "id": "audit",
    "title": "통합 재감사",
    "detail": "공개판 44270bf2 기준 함수별 완성도 재산정",
-   "state": "running",
+   "state": "done",
    "started": "2026-11-06T08:58+09:00",
-   "touched": "2026-11-06T09:11+09:00",
-   "idle_sec": 5,
-   "steps": 47,
+   "touched": "2026-11-06T09:13+09:00",
+   "idle_sec": 91,
+   "steps": 52,
    "last": ""
   },
   {
@@ -1050,7 +1050,7 @@
    "state": "done",
    "started": "2026-11-06T08:58+09:00",
    "touched": "2026-11-06T09:10+09:00",
-   "idle_sec": 54,
+   "idle_sec": 236,
    "steps": 44,
    "last": ""
   }
@@ -1137,5 +1137,5 @@
   "pck_sha256": "0fccc6a999e3d64790e5377dee24d376ef825898716c8c0451c3827427388fb0",
   "wasm_sha256": "fc74679e3b97f76878947fcd4fbe1268cbfa6188182a2e33bbc3f5dc9bfa57d0"
  },
- "generated": "2026-11-06T09:11:40+09:00"
+ "generated": "2026-11-06T09:14:42+09:00"
 }
